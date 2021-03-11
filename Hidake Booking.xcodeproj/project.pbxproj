@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B9221EB125F846E5000FF3BB /* LoginCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EB025F846E5000FF3BB /* LoginCV.swift */; };
+		B9221EBA25F84C91000FF3BB /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EB925F84C91000FF3BB /* TextFieldView.swift */; };
+		B9221EC225F86334000FF3BB /* RegisterCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EC125F86334000FF3BB /* RegisterCV.swift */; };
 		B9444AF725F8407E00EF50B6 /* Hidake_BookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444AF625F8407E00EF50B6 /* Hidake_BookingApp.swift */; };
-		B9444AF925F8407E00EF50B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444AF825F8407E00EF50B6 /* ContentView.swift */; };
+		B9444AF925F8407E00EF50B6 /* EntryCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444AF825F8407E00EF50B6 /* EntryCV.swift */; };
 		B9444AFB25F8408000EF50B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9444AFA25F8408000EF50B6 /* Assets.xcassets */; };
 		B9444AFE25F8408000EF50B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9444AFD25F8408000EF50B6 /* Preview Assets.xcassets */; };
 		B9444B0925F8408100EF50B6 /* Hidake_BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444B0825F8408100EF50B6 /* Hidake_BookingTests.swift */; };
 		B9444B1425F8408100EF50B6 /* Hidake_BookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444B1325F8408100EF50B6 /* Hidake_BookingUITests.swift */; };
+		B98A2C5725F997EF002D1ACF /* MenuCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5625F997EF002D1ACF /* MenuCV.swift */; };
+		B98A2C5C25FA1B33002D1ACF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +39,11 @@
 
 /* Begin PBXFileReference section */
 		B9221EB025F846E5000FF3BB /* LoginCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCV.swift; sourceTree = "<group>"; };
+		B9221EB925F84C91000FF3BB /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		B9221EC125F86334000FF3BB /* RegisterCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCV.swift; sourceTree = "<group>"; };
 		B9444AF325F8407E00EF50B6 /* Hidake Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hidake Booking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9444AF625F8407E00EF50B6 /* Hidake_BookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hidake_BookingApp.swift; sourceTree = "<group>"; };
-		B9444AF825F8407E00EF50B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9444AF825F8407E00EF50B6 /* EntryCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCV.swift; sourceTree = "<group>"; };
 		B9444AFA25F8408000EF50B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9444AFD25F8408000EF50B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9444AFF25F8408000EF50B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		B9444B0F25F8408100EF50B6 /* Hidake BookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hidake BookingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9444B1325F8408100EF50B6 /* Hidake_BookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hidake_BookingUITests.swift; sourceTree = "<group>"; };
 		B9444B1525F8408100EF50B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B98A2C5625F997EF002D1ACF /* MenuCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCV.swift; sourceTree = "<group>"; };
+		B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +85,21 @@
 		B9221EAF25F846BF000FF3BB /* Content Views */ = {
 			isa = PBXGroup;
 			children = (
-				B9444AF825F8407E00EF50B6 /* ContentView.swift */,
+				B9444AF825F8407E00EF50B6 /* EntryCV.swift */,
 				B9221EB025F846E5000FF3BB /* LoginCV.swift */,
+				B9221EC125F86334000FF3BB /* RegisterCV.swift */,
+				B98A2C5625F997EF002D1ACF /* MenuCV.swift */,
 			);
 			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		B9221EB825F84C7D000FF3BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9221EB925F84C91000FF3BB /* TextFieldView.swift */,
+				B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B9444AEA25F8407E00EF50B6 = {
@@ -106,6 +125,7 @@
 		B9444AF525F8407E00EF50B6 /* Hidake Booking */ = {
 			isa = PBXGroup;
 			children = (
+				B9221EB825F84C7D000FF3BB /* Views */,
 				B9221EAF25F846BF000FF3BB /* Content Views */,
 				B9444AF625F8407E00EF50B6 /* Hidake_BookingApp.swift */,
 				B9444AFA25F8408000EF50B6 /* Assets.xcassets */,
@@ -271,7 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9221EB125F846E5000FF3BB /* LoginCV.swift in Sources */,
-				B9444AF925F8407E00EF50B6 /* ContentView.swift in Sources */,
+				B9221EC225F86334000FF3BB /* RegisterCV.swift in Sources */,
+				B9444AF925F8407E00EF50B6 /* EntryCV.swift in Sources */,
+				B98A2C5725F997EF002D1ACF /* MenuCV.swift in Sources */,
+				B9221EBA25F84C91000FF3BB /* TextFieldView.swift in Sources */,
+				B98A2C5C25FA1B33002D1ACF /* CategoryView.swift in Sources */,
 				B9444AF725F8407E00EF50B6 /* Hidake_BookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
