@@ -19,6 +19,7 @@
 		B98A2C5725F997EF002D1ACF /* MenuCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5625F997EF002D1ACF /* MenuCV.swift */; };
 		B98A2C5C25FA1B33002D1ACF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */; };
 		B98A2C6425FB06ED002D1ACF /* CalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */; };
+		B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B98A2C5625F997EF002D1ACF /* MenuCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCV.swift; sourceTree = "<group>"; };
 		B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCV.swift; sourceTree = "<group>"; };
+		B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				B9221EC125F86334000FF3BB /* RegisterCV.swift */,
 				B98A2C5625F997EF002D1ACF /* MenuCV.swift */,
 				B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */,
+				B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */,
 				B9221EB125F846E5000FF3BB /* LoginCV.swift in Sources */,
 				B9221EC225F86334000FF3BB /* RegisterCV.swift in Sources */,
 				B98A2C6425FB06ED002D1ACF /* CalenderCV.swift in Sources */,

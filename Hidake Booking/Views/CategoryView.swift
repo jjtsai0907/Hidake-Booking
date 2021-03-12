@@ -53,7 +53,7 @@ struct CategoryView: View {
                                 Text("\(activityIcon) \(activity)")
                                     .font(.title)
                                     .onTapGesture {
-                                        print("\(activity) clicked")
+                                        print("CategoryView: \(activity) clicked")
                                         selectedActivity = activity
                                         showingCalender.toggle()
                                         
@@ -72,38 +72,6 @@ struct CategoryView: View {
                 
             }
             
-            /*
-             if edittingFoodType {
-             
-             DisclosureGroup("Selected:    \(updatedFoodType)", isExpanded: $edittingFoodType){
-             ScrollView{
-             VStack{
-             
-             ForEach(foodTypes, id: \.self){ type in
-             Text(type)
-             .bold()
-             .frame(maxWidth: .infinity)
-             .padding(5)
-             .onTapGesture {
-             self.updatedFoodType = "\(type)"
-             print("updatedFoodType: \(self.updatedFoodType)")
-             
-             }
-             
-             }
-             
-             
-             }
-             
-             }.frame(height: 200)
-             }
-             
-             
-             }else{
-             Text(truckProfileDatas.datas.truckFoodType)
-             .padding(.leading, 38)
-             }
-             */
             
         }.onTapGesture {
             clicked.toggle()
