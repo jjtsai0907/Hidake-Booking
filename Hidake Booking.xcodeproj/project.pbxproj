@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15CFC5FD18F70ACE09542CA9 /* Pods_Hidake_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */; };
 		B9221EB125F846E5000FF3BB /* LoginCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EB025F846E5000FF3BB /* LoginCV.swift */; };
 		B9221EBA25F84C91000FF3BB /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EB925F84C91000FF3BB /* TextFieldView.swift */; };
 		B9221EC225F86334000FF3BB /* RegisterCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EC125F86334000FF3BB /* RegisterCV.swift */; };
@@ -20,10 +21,15 @@
 		B965B82525FC52A8004928EB /* TabCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965B82425FC52A8004928EB /* TabCV.swift */; };
 		B965B82A25FC5486004928EB /* AnnouncementCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965B82925FC5486004928EB /* AnnouncementCV.swift */; };
 		B965B82F25FC563B004928EB /* MeCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965B82E25FC563B004928EB /* MeCV.swift */; };
+		B965B83A25FCF143004928EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B965B83925FCF143004928EB /* GoogleService-Info.plist */; };
+		B967648E25FCFFE600DFE368 /* OwnerCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967648D25FCFFE600DFE368 /* OwnerCV.swift */; };
+		B967649325FD028700DFE368 /* TabEditCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967649225FD028700DFE368 /* TabEditCV.swift */; };
 		B98A2C5725F997EF002D1ACF /* MenuCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5625F997EF002D1ACF /* MenuCV.swift */; };
 		B98A2C5C25FA1B33002D1ACF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */; };
 		B98A2C6425FB06ED002D1ACF /* CalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */; };
 		B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */; };
+		D451F4C69EBCE8E41F6A7B23 /* Pods_Hidake_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E13ED8BFE2FCD601EC3109 /* Pods_Hidake_BookingTests.framework */; };
+		EE0C72652ABD8D27890C066F /* Pods_Hidake_Booking_Hidake_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01986213ACCA98332EAB4A7E /* Pods-Hidake Booking-Hidake BookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake Booking-Hidake BookingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		062472B79086EA745E6D0696 /* Pods-Hidake Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake Booking.debug.xcconfig"; path = "Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking.debug.xcconfig"; sourceTree = "<group>"; };
+		58E13ED8BFE2FCD601EC3109 /* Pods_Hidake_BookingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hidake_BookingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79B73EF53977ABFD18B0C878 /* Pods-Hidake Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake Booking.release.xcconfig"; path = "Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking.release.xcconfig"; sourceTree = "<group>"; };
+		8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hidake_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hidake_Booking_Hidake_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA42465845BEBE1FC63F88A /* Pods-Hidake BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake BookingTests.release.xcconfig"; path = "Target Support Files/Pods-Hidake BookingTests/Pods-Hidake BookingTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9221EB025F846E5000FF3BB /* LoginCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCV.swift; sourceTree = "<group>"; };
 		B9221EB925F84C91000FF3BB /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		B9221EC125F86334000FF3BB /* RegisterCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCV.swift; sourceTree = "<group>"; };
@@ -62,10 +75,15 @@
 		B965B82425FC52A8004928EB /* TabCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCV.swift; sourceTree = "<group>"; };
 		B965B82925FC5486004928EB /* AnnouncementCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCV.swift; sourceTree = "<group>"; };
 		B965B82E25FC563B004928EB /* MeCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCV.swift; sourceTree = "<group>"; };
+		B965B83925FCF143004928EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B967648D25FCFFE600DFE368 /* OwnerCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCV.swift; sourceTree = "<group>"; };
+		B967649225FD028700DFE368 /* TabEditCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEditCV.swift; sourceTree = "<group>"; };
 		B98A2C5625F997EF002D1ACF /* MenuCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCV.swift; sourceTree = "<group>"; };
 		B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCV.swift; sourceTree = "<group>"; };
 		B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSheet.swift; sourceTree = "<group>"; };
+		D60FFF4CAD78223A4377BD47 /* Pods-Hidake BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake BookingTests.debug.xcconfig"; path = "Target Support Files/Pods-Hidake BookingTests/Pods-Hidake BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9605DBC12DF80260C744073 /* Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; path = "Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B965B82025FB85C1004928EB /* FSCalendar in Frameworks */,
+				15CFC5FD18F70ACE09542CA9 /* Pods_Hidake_Booking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D451F4C69EBCE8E41F6A7B23 /* Pods_Hidake_BookingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +108,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0C72652ABD8D27890C066F /* Pods_Hidake_Booking_Hidake_BookingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5264DFCFA137E8C30B23A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				062472B79086EA745E6D0696 /* Pods-Hidake Booking.debug.xcconfig */,
+				79B73EF53977ABFD18B0C878 /* Pods-Hidake Booking.release.xcconfig */,
+				01986213ACCA98332EAB4A7E /* Pods-Hidake Booking-Hidake BookingUITests.debug.xcconfig */,
+				E9605DBC12DF80260C744073 /* Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig */,
+				D60FFF4CAD78223A4377BD47 /* Pods-Hidake BookingTests.debug.xcconfig */,
+				AFA42465845BEBE1FC63F88A /* Pods-Hidake BookingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4962A18ED476BBAA01AD017 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */,
+				A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */,
+				58E13ED8BFE2FCD601EC3109 /* Pods_Hidake_BookingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9221EAF25F846BF000FF3BB /* Content Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +150,8 @@
 				B965B82425FC52A8004928EB /* TabCV.swift */,
 				B965B82925FC5486004928EB /* AnnouncementCV.swift */,
 				B965B82E25FC563B004928EB /* MeCV.swift */,
+				B967648D25FCFFE600DFE368 /* OwnerCV.swift */,
+				B967649225FD028700DFE368 /* TabEditCV.swift */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -126,6 +172,8 @@
 				B9444B0725F8408100EF50B6 /* Hidake BookingTests */,
 				B9444B1225F8408100EF50B6 /* Hidake BookingUITests */,
 				B9444AF425F8407E00EF50B6 /* Products */,
+				0C5264DFCFA137E8C30B23A5 /* Pods */,
+				B4962A18ED476BBAA01AD017 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +193,7 @@
 				B9221EB825F84C7D000FF3BB /* Views */,
 				B9221EAF25F846BF000FF3BB /* Content Views */,
 				B9444AF625F8407E00EF50B6 /* Hidake_BookingApp.swift */,
+				B965B83925FCF143004928EB /* GoogleService-Info.plist */,
 				B9444AFA25F8408000EF50B6 /* Assets.xcassets */,
 				B9444AFF25F8408000EF50B6 /* Info.plist */,
 				B9444AFC25F8408000EF50B6 /* Preview Content */,
@@ -185,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9444B1825F8408100EF50B6 /* Build configuration list for PBXNativeTarget "Hidake Booking" */;
 			buildPhases = (
+				36DD4184362DB2530CD9DF22 /* [CP] Check Pods Manifest.lock */,
 				B9444AEF25F8407E00EF50B6 /* Sources */,
 				B9444AF025F8407E00EF50B6 /* Frameworks */,
 				B9444AF125F8407E00EF50B6 /* Resources */,
+				6E570C7A07789D5C98C09763 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9444B1B25F8408100EF50B6 /* Build configuration list for PBXNativeTarget "Hidake BookingTests" */;
 			buildPhases = (
+				996366A5B20617E23128128D /* [CP] Check Pods Manifest.lock */,
 				B9444B0025F8408100EF50B6 /* Sources */,
 				B9444B0125F8408100EF50B6 /* Frameworks */,
 				B9444B0225F8408100EF50B6 /* Resources */,
@@ -223,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9444B1E25F8408100EF50B6 /* Build configuration list for PBXNativeTarget "Hidake BookingUITests" */;
 			buildPhases = (
+				9AD4012A1C2B87DDA46BA0E6 /* [CP] Check Pods Manifest.lock */,
 				B9444B0B25F8408100EF50B6 /* Sources */,
 				B9444B0C25F8408100EF50B6 /* Frameworks */,
 				B9444B0D25F8408100EF50B6 /* Resources */,
+				3359BC6793A4CCB90447A1E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +343,7 @@
 			files = (
 				B9444AFE25F8408000EF50B6 /* Preview Assets.xcassets in Resources */,
 				B9444AFB25F8408000EF50B6 /* Assets.xcassets in Resources */,
+				B965B83A25FCF143004928EB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,13 +363,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3359BC6793A4CCB90447A1E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36DD4184362DB2530CD9DF22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hidake Booking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E570C7A07789D5C98C09763 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		996366A5B20617E23128128D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hidake BookingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AD4012A1C2B87DDA46BA0E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hidake Booking-Hidake BookingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B9444AEF25F8407E00EF50B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B967649325FD028700DFE368 /* TabEditCV.swift in Sources */,
 				B965B82F25FC563B004928EB /* MeCV.swift in Sources */,
 				B965B82A25FC5486004928EB /* AnnouncementCV.swift in Sources */,
+				B967648E25FCFFE600DFE368 /* OwnerCV.swift in Sources */,
 				B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */,
 				B9221EB125F846E5000FF3BB /* LoginCV.swift in Sources */,
 				B9221EC225F86334000FF3BB /* RegisterCV.swift in Sources */,
@@ -411,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -466,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -478,6 +638,7 @@
 		};
 		B9444B1925F8408100EF50B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 062472B79086EA745E6D0696 /* Pods-Hidake Booking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,6 +660,7 @@
 		};
 		B9444B1A25F8408100EF50B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79B73EF53977ABFD18B0C878 /* Pods-Hidake Booking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,6 +682,7 @@
 		};
 		B9444B1C25F8408100EF50B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60FFF4CAD78223A4377BD47 /* Pods-Hidake BookingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +704,7 @@
 		};
 		B9444B1D25F8408100EF50B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFA42465845BEBE1FC63F88A /* Pods-Hidake BookingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -562,6 +726,7 @@
 		};
 		B9444B1F25F8408100EF50B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01986213ACCA98332EAB4A7E /* Pods-Hidake Booking-Hidake BookingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -581,6 +746,7 @@
 		};
 		B9444B2025F8408100EF50B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9605DBC12DF80260C744073 /* Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>552208756486-qpbj2net24a6j2civetl5pfq38084cb1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.552208756486-qpbj2net24a6j2civetl5pfq38084cb1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBOtkiZ46htFJLYJ0aclLePR0NAnTkJmkY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>552208756486</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.JJTsai0907.Hidake-Booking</string>
+	<key>PROJECT_ID</key>
+	<string>hidake-booking</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hidake-booking.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:552208756486:ios:2fd8ecd5b7f185574d7887</string>
+</dict>
+</plist>

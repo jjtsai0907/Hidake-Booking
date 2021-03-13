@@ -57,7 +57,7 @@ struct MenuCV: View {
             
         }.padding(.top, 30)
         .navigationTitle("Advantures")
-        .navigationBarBackButtonHidden(true)
+        
         
         
     }

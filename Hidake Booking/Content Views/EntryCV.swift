@@ -11,7 +11,7 @@ struct EntryCV: View {
     
     
     @State private var index = 0
-    
+    @State private var showingOwnerCV = false
     
     var body: some View {
         
@@ -100,10 +100,21 @@ struct EntryCV: View {
                 
                 Spacer()
                 
+                NavigationLink(destination: OwnerCV(), isActive: $showingOwnerCV, label: {
+                    
+                })
+                
             }.padding(.top, 20)
+            .navigationTitle("")
+            .navigationBarItems(trailing: Button(action: {
+                showingOwnerCV = true
+            }){
+                Text("管理員")
+            })
             
             
-        }.navigationTitle("")
+        }
+        
     }
 }
 
