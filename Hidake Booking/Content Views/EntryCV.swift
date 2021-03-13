@@ -34,7 +34,7 @@ struct EntryCV: View {
                     }){
                         
                         VStack {
-                            Text("Login")
+                            Text("登入")
                                 .bold()
                                 .font(.title3)
                                 .foregroundColor(index == 0 ? Color("themeBlue") : .gray)
@@ -63,7 +63,7 @@ struct EntryCV: View {
                     }){
                         
                         VStack {
-                            Text("Register")
+                            Text("註冊")
                                 .bold()
                                 .font(.title3)
                                 .foregroundColor(index == 1 ? Color("themeBlue") : .gray)

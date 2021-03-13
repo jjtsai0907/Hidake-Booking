@@ -35,7 +35,7 @@ struct DetailsSheet: View {
                         }){
                             HStack (alignment: .center){
                                 Image(systemName: "sun.max.fill")
-                                Text("Schedule")
+                                Text("行程規劃")
                                     .font(.title)
                                     .padding(.top, 8)
                                 
@@ -91,7 +91,7 @@ struct DetailsSheet: View {
                         }){
                             HStack {
                                 Image(systemName: "checkmark")
-                                Text("Included Costs")
+                                Text("費用包含")
                                     .font(.title)
                             }.foregroundColor(Color("themeBlue"))
                         }.padding(.vertical, 10)
@@ -122,7 +122,7 @@ struct DetailsSheet: View {
                         }){
                             HStack {
                                 Image(systemName: "bubble.left.and.bubble.right")
-                                Text("Extra Costs")
+                                Text("自理費用")
                                     .font(.title)
                             }.foregroundColor(Color("themeBlue"))
                         }.padding(.vertical, 10)
@@ -144,7 +144,7 @@ struct DetailsSheet: View {
                         }){
                             HStack {
                                 Image(systemName: "exclamationmark.triangle.fill")
-                                Text("Important Info")
+                                Text("注意事項")
                                     .font(.title)
                             }.foregroundColor(.red)
                         }.padding(.vertical, 10)

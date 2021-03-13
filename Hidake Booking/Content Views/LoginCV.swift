@@ -19,17 +19,15 @@ struct LoginCV: View {
         
         
         VStack{
-            TextFieldView(placeHolder: "Google Email: ", textValue: $loginEmailValue)
-            TextFieldView(placeHolder: "Password: ", textValue: $loginPasswordValue)
+            TextFieldView(placeHolder: "Google 信箱: ", textValue: $loginEmailValue)
+            TextFieldView(placeHolder: "Google 密碼: ", textValue: $loginPasswordValue)
             
             
             Button(action: {
                 loggedIn = true
             
-                print("Hey")
-                print(loggedIn)
             }){
-                Text("Log In")
+                Text("登入")
                     .bold()
                     .padding(.horizontal, 40)
                     .padding(.vertical, 8)
@@ -45,7 +43,7 @@ struct LoginCV: View {
         }
         
         
-        NavigationLink(destination: MenuCV(), isActive: $loggedIn, label: {
+        NavigationLink(destination: TabCV(), isActive: $loggedIn, label: {
             Text("")
         })
         

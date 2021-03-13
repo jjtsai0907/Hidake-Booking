@@ -23,9 +23,9 @@ struct RegisterCV: View {
         
         VStack{
             
-            TextFieldView(placeHolder: "Google Email: ", textValue: $emailValue)
-            TextFieldView(placeHolder: "Password: ", textValue: $passwordValue)
-            TextFieldView(placeHolder: "Full Name: ", textValue: $nameValue)
+            TextFieldView(placeHolder: "Google 信箱: ", textValue: $emailValue)
+            TextFieldView(placeHolder: "Google 密碼: ", textValue: $passwordValue)
+            TextFieldView(placeHolder: "全名: ", textValue: $nameValue)
             TextFieldView(placeHolder: "Line ID: ", textValue: $lineIDlValue)
             
             
@@ -33,7 +33,7 @@ struct RegisterCV: View {
                 print("RegisterCV: Register Button Pressed!")
                 registered = true
             }){
-                Text("Sign Up")
+                Text("註冊")
                     .padding(.horizontal, 40)
                     .padding(.vertical, 8)
                     .foregroundColor(.white)
@@ -49,7 +49,7 @@ struct RegisterCV: View {
         
         
         
-        NavigationLink(destination: MenuCV(), isActive: $registered, label: {
+        NavigationLink(destination: TabCV(), isActive: $registered, label: {
             Text("")
         })
         

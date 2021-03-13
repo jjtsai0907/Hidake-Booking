@@ -12,7 +12,7 @@ struct CalenderCV: View {
     var activity: String
     @State var selectedDate = Date()
     
-    var groups = ["Group A   6500NTD ", "Group B   6800NTD"]
+    var groups = ["Group A   台幣 6500 ", "Group B   台幣 6800 "]
     
     @State var showingDetails = false
     
@@ -23,7 +23,7 @@ struct CalenderCV: View {
             
             
             
-            DatePicker("Pick a date", selection: $selectedDate, displayedComponents: .date)
+            DatePicker("Pick a date", selection: $selectedDate, in: Date()..., displayedComponents: .date)
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .padding(30)
             
@@ -34,7 +34,7 @@ struct CalenderCV: View {
                     HStack{
                         Text("\(group)")
                         Spacer()
-                        Text("5 Seats Left")
+                        Text(" 剩餘名額 5 ")
                             .foregroundColor(.red)
                     }
                     
@@ -51,7 +51,7 @@ struct CalenderCV: View {
                     showingDetails.toggle()
                     
                 }){
-                    Text("Details")
+                    Text("行程")
                         .bold()
                         .padding(.horizontal, 40)
                         .padding(.vertical, 8)
@@ -69,7 +69,7 @@ struct CalenderCV: View {
                 Button(action: {
                     print("CalenderCV: pressed")
                 }){
-                    Text("Register")
+                    Text("報名")
                         .bold()
                         .padding(.horizontal, 40)
                         .padding(.vertical, 8)
