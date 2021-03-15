@@ -12,12 +12,20 @@ struct TabEditCV: View {
         
         TabView {
             
+            EditMenuCV()
+                .tabItem {
+                    Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                    Text("編輯目錄")
+                }
             
-            
-            
+            /*EditDetailsSheetCV()
+                .tabItem {
+                    Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                    Text("編輯行程")
+                }*/
         }
         
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
     }
 }
 
