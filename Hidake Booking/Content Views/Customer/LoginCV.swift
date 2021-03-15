@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
 
 struct LoginCV: View {
+    
+    
     
     
     // TextValue
@@ -23,7 +27,16 @@ struct LoginCV: View {
             TextFieldView(placeHolder: "Google 密碼: ", textValue: $loginPasswordValue)
             
             
+            
+            
             Button(action: {
+                
+                GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
+                
+                GIDSignIn.sharedInstance()?.signIn()
+                
+                
+                
                 loggedIn = true
             
             }){

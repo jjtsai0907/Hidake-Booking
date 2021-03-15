@@ -21,7 +21,7 @@
 		B9444AFE25F8408000EF50B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9444AFD25F8408000EF50B6 /* Preview Assets.xcassets */; };
 		B9444B0925F8408100EF50B6 /* Hidake_BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444B0825F8408100EF50B6 /* Hidake_BookingTests.swift */; };
 		B9444B1425F8408100EF50B6 /* Hidake_BookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444B1325F8408100EF50B6 /* Hidake_BookingUITests.swift */; };
-		B965B82025FB85C1004928EB /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B965B81F25FB85C1004928EB /* FSCalendar */; };
+		B965B82025FB85C1004928EB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B965B81F25FB85C1004928EB /* SwiftPackageProductDependency */; };
 		B965B82525FC52A8004928EB /* TabCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965B82425FC52A8004928EB /* TabCV.swift */; };
 		B965B82A25FC5486004928EB /* AnnouncementCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965B82925FC5486004928EB /* AnnouncementCV.swift */; };
 		B965B82F25FC563B004928EB /* MeCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965B82E25FC563B004928EB /* MeCV.swift */; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B965B82025FB85C1004928EB /* FSCalendar in Frameworks */,
+				B965B82025FB85C1004928EB /* BuildFile in Frameworks */,
 				15CFC5FD18F70ACE09542CA9 /* Pods_Hidake_Booking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +270,7 @@
 				B9444AF025F8407E00EF50B6 /* Frameworks */,
 				B9444AF125F8407E00EF50B6 /* Resources */,
 				6E570C7A07789D5C98C09763 /* [CP] Embed Pods Frameworks */,
+				74FD6929ECE62CEBB3098D76 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,7 +278,7 @@
 			);
 			name = "Hidake Booking";
 			packageProductDependencies = (
-				B965B81F25FB85C1004928EB /* FSCalendar */,
+				B965B81F25FB85C1004928EB /* SwiftPackageProductDependency */,
 			);
 			productName = "Hidake Booking";
 			productReference = B9444AF325F8407E00EF50B6 /* Hidake Booking.app */;
@@ -311,6 +312,7 @@
 				B9444B0C25F8408100EF50B6 /* Frameworks */,
 				B9444B0D25F8408100EF50B6 /* Resources */,
 				3359BC6793A4CCB90447A1E7 /* [CP] Embed Pods Frameworks */,
+				635C9F8F569563C01B7C39CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,7 +356,7 @@
 			);
 			mainGroup = B9444AEA25F8407E00EF50B6;
 			packageReferences = (
-				B965B81E25FB85C1004928EB /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				B965B81E25FB85C1004928EB /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = B9444AF425F8407E00EF50B6 /* Products */;
 			projectDirPath = "";
@@ -434,6 +436,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		635C9F8F569563C01B7C39CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E570C7A07789D5C98C09763 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +468,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74FD6929ECE62CEBB3098D76 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hidake Booking/Pods-Hidake Booking-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		996366A5B20617E23128128D /* [CP] Check Pods Manifest.lock */ = {
@@ -842,7 +878,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B965B81E25FB85C1004928EB /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+		B965B81E25FB85C1004928EB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
 			requirement = {
@@ -853,9 +889,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B965B81F25FB85C1004928EB /* FSCalendar */ = {
+		B965B81F25FB85C1004928EB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B965B81E25FB85C1004928EB /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			package = B965B81E25FB85C1004928EB /* RemoteSwiftPackageReference */;
 			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */

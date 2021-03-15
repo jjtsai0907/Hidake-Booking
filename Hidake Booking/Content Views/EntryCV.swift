@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EntryCV: View {
     
+    @ObservedObject var info : AppDelegate
     
     @State private var index = 0
     @State private var showingOwnerCV = false
@@ -18,6 +19,8 @@ struct EntryCV: View {
         NavigationView {
             
             VStack {
+                Text(info.email)
+                Text(info.customerUID)
                 
                 Image("logo")
                     .resizable()
@@ -118,8 +121,11 @@ struct EntryCV: View {
     }
 }
 
+
+/*
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         EntryCV()
     }
 }
+*/
