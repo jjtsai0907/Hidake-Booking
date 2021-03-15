@@ -61,7 +61,7 @@ struct EditMenuCV: View {
                 }
                 
             }.padding(.top, 30)
-            .navigationTitle("Advantures")
+            
             
     }
 }

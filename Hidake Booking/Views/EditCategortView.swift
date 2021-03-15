@@ -13,10 +13,11 @@ struct EditCategortView: View {
     var categoryName: String
     var activities: [String]
     var activityIcon: String
-    @State var showingCalender = false
+    @State private var showingAddCalenderCV = false
+    @State private var showingAddActivityCV = false
     @State var selectedActivity = ""
     
-    @State private var showingAddActivityCV = false
+
     
     var body: some View {
         
@@ -59,15 +60,17 @@ struct EditCategortView: View {
                         .onTapGesture {
                             print("CategoryView: \(activity) clicked")
                             selectedActivity = activity
-                            showingCalender.toggle()
+                            showingAddCalenderCV.toggle()
                             
                         }
                     
                     if selectedActivity != "目前無團" || selectedActivity == "" {
-                        NavigationLink(destination: CalenderCV(activity: "\(selectedActivity)"), isActive: $showingCalender){
+                        NavigationLink(destination: EditActivityCalenderCV(activityName: selectedActivity), isActive: $showingAddCalenderCV){
                             
                         }
                     }
+                    
+                    
                 }
                 
                 
@@ -93,7 +96,11 @@ struct EditCategortView: View {
 
         .padding(15)
         
+        
+        
         NavigationLink(destination: AddActivityCV(category: categoryName), isActive: $showingAddActivityCV, label: {})
+        
+        /*NavigationLink(destination: EditActivityCalenderCV(), isActive: $showingAddCalenderCV, label: {})*/
     }
     
     func addNewTour () {

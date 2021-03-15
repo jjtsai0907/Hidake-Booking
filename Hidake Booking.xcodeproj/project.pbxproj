@@ -32,6 +32,7 @@
 		B98A2C5C25FA1B33002D1ACF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */; };
 		B98A2C6425FB06ED002D1ACF /* CalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */; };
 		B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */; };
+		B9FBA22F25FF1F01000CF548 /* EditActivityCalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FBA22E25FF1F01000CF548 /* EditActivityCalenderCV.swift */; };
 		D451F4C69EBCE8E41F6A7B23 /* Pods_Hidake_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E13ED8BFE2FCD601EC3109 /* Pods_Hidake_BookingTests.framework */; };
 		EE0C72652ABD8D27890C066F /* Pods_Hidake_Booking_Hidake_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCV.swift; sourceTree = "<group>"; };
 		B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSheet.swift; sourceTree = "<group>"; };
+		B9FBA22E25FF1F01000CF548 /* EditActivityCalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditActivityCalenderCV.swift; sourceTree = "<group>"; };
 		D60FFF4CAD78223A4377BD47 /* Pods-Hidake BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake BookingTests.debug.xcconfig"; path = "Target Support Files/Pods-Hidake BookingTests/Pods-Hidake BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9605DBC12DF80260C744073 /* Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; path = "Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,18 +151,9 @@
 		B9221EAF25F846BF000FF3BB /* Content Views */ = {
 			isa = PBXGroup;
 			children = (
+				B9FBA23F25FF216B000CF548 /* Customer */,
+				B9FBA23325FF213B000CF548 /* Owner */,
 				B9444AF825F8407E00EF50B6 /* EntryCV.swift */,
-				B9221EB025F846E5000FF3BB /* LoginCV.swift */,
-				B9221EC125F86334000FF3BB /* RegisterCV.swift */,
-				B98A2C5625F997EF002D1ACF /* MenuCV.swift */,
-				B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */,
-				B901EC3525FE429C009E28CC /* AddActivityCV.swift */,
-				B965B82425FC52A8004928EB /* TabCV.swift */,
-				B965B82925FC5486004928EB /* AnnouncementCV.swift */,
-				B965B82E25FC563B004928EB /* MeCV.swift */,
-				B967648D25FCFFE600DFE368 /* OwnerCV.swift */,
-				B967649225FD028700DFE368 /* TabEditCV.swift */,
-				B901EC1F25FE161F009E28CC /* EditMenuCV.swift */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -237,6 +230,32 @@
 				B9444B1525F8408100EF50B6 /* Info.plist */,
 			);
 			path = "Hidake BookingUITests";
+			sourceTree = "<group>";
+		};
+		B9FBA23325FF213B000CF548 /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				B967648D25FCFFE600DFE368 /* OwnerCV.swift */,
+				B9FBA22E25FF1F01000CF548 /* EditActivityCalenderCV.swift */,
+				B967649225FD028700DFE368 /* TabEditCV.swift */,
+				B901EC1F25FE161F009E28CC /* EditMenuCV.swift */,
+				B901EC3525FE429C009E28CC /* AddActivityCV.swift */,
+			);
+			path = Owner;
+			sourceTree = "<group>";
+		};
+		B9FBA23F25FF216B000CF548 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				B98A2C5625F997EF002D1ACF /* MenuCV.swift */,
+				B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */,
+				B9221EC125F86334000FF3BB /* RegisterCV.swift */,
+				B965B82425FC52A8004928EB /* TabCV.swift */,
+				B9221EB025F846E5000FF3BB /* LoginCV.swift */,
+				B965B82E25FC563B004928EB /* MeCV.swift */,
+				B965B82925FC5486004928EB /* AnnouncementCV.swift */,
+			);
+			path = Customer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,6 +504,7 @@
 			files = (
 				B967649325FD028700DFE368 /* TabEditCV.swift in Sources */,
 				B901EC3625FE429C009E28CC /* AddActivityCV.swift in Sources */,
+				B9FBA22F25FF1F01000CF548 /* EditActivityCalenderCV.swift in Sources */,
 				B901EC2525FE174A009E28CC /* EditDetailsSheet.swift in Sources */,
 				B965B82F25FC563B004928EB /* MeCV.swift in Sources */,
 				B901EC2E25FE3558009E28CC /* EditCategortView.swift in Sources */,

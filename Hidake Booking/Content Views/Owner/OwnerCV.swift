@@ -26,6 +26,8 @@ struct OwnerCV: View {
                 
                 
                 Button(action: {
+                    
+                  
                     ownerLoggedIn = true
                 
                 }){
@@ -49,6 +51,8 @@ struct OwnerCV: View {
                 Text("")
             })
             
+        
+        
     }
 }
 
