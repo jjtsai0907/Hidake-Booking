@@ -31,7 +31,7 @@ struct OwnerCV: View {
            
             
             Button(action: {
-                
+                ownerLoggedIn = true
                /* Auth.auth().signIn(withEmail: ownerEmailValue, password: ownerPasswordValue) { authResult, error in
                     if let e = error {
                         print(e)

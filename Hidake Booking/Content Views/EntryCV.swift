@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct EntryCV: View {
     
     @ObservedObject var info : AppDelegate
+    
+    @State var userUID = Auth.auth().currentUser?.uid
     
     @State private var index = 0
     @State private var showingOwnerCV = false
@@ -19,7 +22,9 @@ struct EntryCV: View {
         NavigationView {
             
             VStack {
+                
                 Text(info.email)
+                
                 Text(info.customerUID)
                 
                 Image("logo")
@@ -106,6 +111,10 @@ struct EntryCV: View {
                 NavigationLink(destination: OwnerCV(), isActive: $showingOwnerCV, label: {
                     
                 })
+                
+                
+                
+            
                 
             }.padding(.top, 20)
             .navigationTitle("")

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FSCalendar
 
 struct CalenderCV: View {
     
@@ -15,19 +16,28 @@ struct CalenderCV: View {
     var groups = ["Group A   台幣 6500 ", "Group B   台幣 6800 "]
     
     @State var showingDetails = false
+    var calendar: FSCalendar!
+    
     
     
     var body: some View {
         
         VStack {
             
+         
+            CalendarController(selectedDate: $selectedDate)
+                    
+            Text("\(selectedDate)")
             
             
-            DatePicker("Pick a date", selection: $selectedDate, in: Date()..., displayedComponents: .date)
+            Spacer()
+            //FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
+            
+            /*DatePicker("Pick a date", selection: $selectedDate, in: Date()..., displayedComponents: .date)
                 .datePickerStyle(GraphicalDatePickerStyle())
-                .padding(30)
+                .padding(30)*/
             
-            
+            /*
             List {
                 
                 ForEach (groups, id: \.self) { group in
@@ -40,7 +50,7 @@ struct CalenderCV: View {
                     
                 }
 
-            }
+            }*/
             
             
             HStack{

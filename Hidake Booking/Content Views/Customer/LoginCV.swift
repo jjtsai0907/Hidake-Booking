@@ -9,10 +9,11 @@ import SwiftUI
 import Firebase
 import GoogleSignIn
 
+
 struct LoginCV: View {
     
     
-    
+    var userUID = Auth.auth().currentUser?.uid
     
     // TextValue
     @State private var loginEmailValue = ""
@@ -37,7 +38,7 @@ struct LoginCV: View {
                 
                 
                 
-                loggedIn = true
+                //loggedIn = true
             
             }){
                 Text("登入")
