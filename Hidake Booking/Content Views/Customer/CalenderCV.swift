@@ -19,18 +19,26 @@ struct CalenderCV: View {
     var calendar: FSCalendar!
     
     
+    @State var dateString = ""
+    
     
     var body: some View {
         
         VStack {
             
          
-            CalendarRepresentable(selectedDate: $selectedDate)
+            CalendarRepresentable(selectedDate: $selectedDate, dateString: $dateString)
+                .padding()
+                .frame(height: 400)
+                
                     
-            Text("\(selectedDate)")
+            //Text("\(selectedDate)")
+            //Text("\(dateString)")
             
             
             Spacer()
+            
+            Text("\(dateString)  Event: 1. go hiking 2. Eating")
             //FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
             
             /*DatePicker("Pick a date", selection: $selectedDate, in: Date()..., displayedComponents: .date)

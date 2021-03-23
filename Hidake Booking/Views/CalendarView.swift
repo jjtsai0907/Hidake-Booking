@@ -16,6 +16,8 @@ struct CalendarRepresentable: UIViewRepresentable {
     var calendar = FSCalendar()
     @Binding var selectedDate: Date
     
+    @Binding var dateString: String
+    
     func updateUIView(_ uiView: FSCalendar, context: Context) {
         
     }
@@ -23,6 +25,7 @@ struct CalendarRepresentable: UIViewRepresentable {
     func makeUIView(context: Context) -> FSCalendar {
         calendar.delegate = context.coordinator
         calendar.dataSource = context.coordinator
+        //calendar.allowsMultipleSelection = true
         
         
         calendar.appearance.eventDefaultColor = .orange
@@ -46,22 +49,33 @@ struct CalendarRepresentable: UIViewRepresentable {
     
     class Coordinator: NSObject, FSCalendarDelegate, FSCalendarDataSource {
         var parent: CalendarRepresentable
+        var formatter = DateFormatter()
         
         init(_ parent: CalendarRepresentable) {
             self.parent = parent
         }
         
+        // Not displaying dates before current day
+        func minimumDate(for calendar: FSCalendar) -> Date {
+            return Date()
+        }
+        
         func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+            formatter.dateFormat = "yyyy-MM-dd"
             
-            if date == parent.selectedDate {
-                return 1
+            if date ==  formatter.date(from: "2021-04-08"){
+                return 2
             }
         
             return 0
         }
         
         func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+            formatter.dateFormat = "yyyy-MM-dd"
+            print("Date:  \(formatter.string(from: date))")
             parent.selectedDate = date
+            
+            parent.dateString = formatter.string(from: date)
         }
         
         func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
@@ -74,6 +88,24 @@ struct CalendarRepresentable: UIViewRepresentable {
         /*func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
             
         }*/
+        
+        func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
+            print("Cancel Date:  \(formatter.string(from: date))")
+        }
+        
+        
+        // show different colour of dates Not working at the moment
+        func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDetaultColorFor date: Date) -> UIColor? {
+            formatter.dateFormat = "yyyy-MM-dd"
+            guard let example = formatter.date(from: "2021-04-08") else {return nil}
+                if date.compare(example) == .orderedSame {
+                    return .red
+                } else {
+                    return nil
+                }
+            
+            
+        }
         
     }
     
