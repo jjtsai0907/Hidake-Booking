@@ -14,26 +14,32 @@ import FirebaseFirestoreSwift
 struct AnnouncementCV: View {
     
     let db = Firestore.firestore()
-    
+    //@StateObject var announcement = Announcement()
+    @State var announcementValue = ""
     
     var body: some View {
-        
-        Button(action: {
+        VStack {
+            TextField("Enter: ", text: $announcementValue)
             
-            let city = Announcement(info: "吃大便吧")
-            
-            
-            do {
-                try db.collection("ANNOUNCEMENTS").document(city.id).setData(from: city)
+            Button(action: {
+                let announcement = Announcement()
+                
+                announcement.info = announcementValue
                 
                 
-            } catch let error {
-                print("Error writing city to Firestore: \(error)")
+                do {
+                    try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
+                    
+                    
+                } catch let error {
+                    print("Error writing city to Firestore: \(error)")
+                }
+                
+            }){
+                Text("Upload Announcement")
             }
-            
-        }){
-            Text("Upload Announcement")
         }
+        
     }
 }
 

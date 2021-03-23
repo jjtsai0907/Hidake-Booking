@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Announcement: Codable, Identifiable {
+class Announcement: Codable, Identifiable, ObservableObject {
     
     var id: String = UUID().uuidString
-    var info: String
+    var info: String = "Default"
     
-    init(info: String) {
+    /*init(info: String) {
         self.info = info
         
-    }
+    }*/
     
 }
