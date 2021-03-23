@@ -38,7 +38,7 @@ struct MenuCV: View {
                     Spacer()
                     VStack{
                         Spacer()
-                        Text("包團")
+                        Text("私人包團")
                             .bold()
                             .font(.title)
                             .foregroundColor(.white)

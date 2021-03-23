@@ -11,24 +11,77 @@ import UIKit
 import SwiftUI
 
 
-class calendars: UIViewController, FSCalendarDelegate{
+struct CalendarRepresentable: UIViewRepresentable {
+    typealias UIViewType = FSCalendar
     var calendar = FSCalendar()
+    @Binding var selectedDate: Date
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        calendar.delegate = self
+    func updateUIView(_ uiView: FSCalendar, context: Context) {
+        
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        calendar.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width)
-        view.addSubview(calendar)
+    
+    func makeUIView(context: Context) -> FSCalendar {
+        calendar.delegate = context.coordinator
+        calendar.dataSource = context.coordinator
+        
+        
+        calendar.appearance.eventDefaultColor = .orange
+        //calendar.appearance.eventOffset
+        
+        
+        return calendar
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    
+    
+    /*func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        selectedDate = date
+        print("Hellow \(date)")
+    }*/
+    
+    class Coordinator: NSObject, FSCalendarDelegate, FSCalendarDataSource {
+        var parent: CalendarRepresentable
+        
+        init(_ parent: CalendarRepresentable) {
+            self.parent = parent
+        }
+        
+        func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+            
+            if date == parent.selectedDate {
+                return 1
+            }
+        
+            return 0
+        }
+        
+        func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+            parent.selectedDate = date
+        }
+        
+        func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
+            
+           // NavigationLink
+            
+            return true
+        }
+        
+        /*func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+            
+        }*/
+        
     }
     
     
 }
 
+
+/*
 struct CalendarController: UIViewControllerRepresentable {
     
     @Binding var selectedDate : Date
@@ -46,11 +99,27 @@ struct CalendarController: UIViewControllerRepresentable {
         print("Hellow \(date)")
     }
     
-    
+    class calendars: UIViewController, FSCalendarDelegate{
+        var calendar = FSCalendar()
+        
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            calendar.delegate = self
+        }
+
+        override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            calendar.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width)
+            view.addSubview(calendar)
+        }
+        
+        
+    }
 }
 
 
-
+*/
 
 
 /*

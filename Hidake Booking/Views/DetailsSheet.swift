@@ -13,6 +13,7 @@ struct DetailsSheet: View {
     @State var showingIncludedCost = false
     @State var showingExtraCosts = false
     @State var showingInfo = false
+    @State var showingGeers = false
     
     var body: some View {
         
@@ -129,6 +130,28 @@ struct DetailsSheet: View {
                    
                         if showingExtraCosts {
                             Text("三日午餐")
+                            
+                        }
+                        
+                    }
+                }
+                
+                
+                Section {
+                    VStack {
+                        
+                        Button(action: {
+                            showingGeers.toggle()
+                        }){
+                            HStack {
+                                Image(systemName: "bandage.fill")
+                                Text("所需裝備")
+                                    .font(.title)
+                            }.foregroundColor(Color("themeBlue"))
+                        }.padding(.vertical, 10)
+                   
+                        if showingGeers {
+                            Text("")
                             
                         }
                         

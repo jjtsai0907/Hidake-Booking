@@ -25,7 +25,7 @@ struct CalenderCV: View {
         VStack {
             
          
-            CalendarController(selectedDate: $selectedDate)
+            CalendarRepresentable(selectedDate: $selectedDate)
                     
             Text("\(selectedDate)")
             
