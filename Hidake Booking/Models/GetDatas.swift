@@ -65,3 +65,57 @@ class GetAnnouncements : ObservableObject {
     }
     
 }
+
+
+
+
+
+class GetJiaMingLakeDates : ObservableObject {
+    
+    @Published var jiaMingLakeList = [Activity]()
+    
+    
+    init() {
+        
+        let db = Firestore.firestore()
+        db.collection("嘉明湖").addSnapshotListener { (snap, err) in
+            if err != nil {
+                print("GetData, info collection error: \(String(describing: err))")
+                return
+            } else {
+                
+                
+                if snap != nil {
+                    self.jiaMingLakeList = []
+                    
+                    for i in snap!.documents {
+                        
+                        print("Loop: \(i.data().count)")
+                       let result = Result {
+                            try i.data(as: Activity.self)
+                        }
+                        
+                        switch result {
+                        case .success(let activity):
+                            if let activity = activity {
+                                print("CustomerMenuContentView, getting data from Firebase : \(activity.groupName)")
+                                self.jiaMingLakeList.append(activity)
+                            } else {
+                                print("CustomerMenuContentView, getting data from Firebase : No data")
+                            }
+                        case .failure(let error):
+                            print("CustomerMenuContentView, getting data from Firebase, Error: \(error)")
+                        }
+                        
+                        
+                        
+                    }
+                }
+                
+            }
+        }
+        
+       
+    }
+    
+}

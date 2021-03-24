@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct EditActivityCalenderCV: View {
+    let db = Firestore.firestore()
     
     var activityName: String
     
@@ -37,7 +40,24 @@ struct EditActivityCalenderCV: View {
             
             
             Button(action: {
+                
+                let activity = Activity()
+                activity.groupName = activityNameValue
+                activity.date = activityDateValue
+                activity.seatsLeft = Int(activitySeatValue) ?? 0
+                
                 print("EditActivityCalenderCV: pressed")
+                do {
+                    try db.collection(activityName).document(activity.id).setData(from: activity)
+                    
+                    activityNameValue = ""
+                    activityDateValue = ""
+                    activitySeatValue = ""
+                    
+                } catch let error {
+                    print("Error writing city to Firestore: \(error)")
+                }
+                
             }){
                 Text("新增")
                     .bold()

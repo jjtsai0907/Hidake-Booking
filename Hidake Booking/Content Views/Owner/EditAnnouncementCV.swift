@@ -24,6 +24,7 @@ struct EditAnnouncementCV: View {
                 announcement.info = announcementValue
                 
                 
+                
                 do {
                     try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
                     
