@@ -38,27 +38,29 @@ struct CalenderCV: View {
             
             Spacer()
             
-            Text("\(dateString)  Event: 1. go hiking 2. Eating")
+            //Text("\(dateString)  Event: 1. go hiking 2. Eating")
             //FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
             
             /*DatePicker("Pick a date", selection: $selectedDate, in: Date()..., displayedComponents: .date)
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .padding(30)*/
             
-            /*
+            
             List {
                 
                 ForEach (groups, id: \.self) { group in
                     HStack{
+                        if dateString == "2021-04-08" {
+                        //Text("\(dateString)")
                         Text("\(group)")
                         Spacer()
                         Text(" 剩餘名額 5 ")
                             .foregroundColor(.red)
                     }
-                    
+                    }
                 }
 
-            }*/
+            }
             
             
             HStack{

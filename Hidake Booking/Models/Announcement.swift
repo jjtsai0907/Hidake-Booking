@@ -18,3 +18,4 @@ class Announcement: Codable, Identifiable, ObservableObject {
     }*/
     
 }
+

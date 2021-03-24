@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 import SwiftUI
+import FirebaseFirestoreSwift
 
 
 
@@ -23,7 +24,7 @@ class GetAnnouncements : ObservableObject {
     init() {
         
         let db = Firestore.firestore()
-        db.collection("ANNOUNCEMENT").addSnapshotListener { (snap, err) in
+        db.collection("ANNOUNCEMENTS").addSnapshotListener { (snap, err) in
             if err != nil {
                 print("GetData, info collection error: \(String(describing: err))")
                 return
@@ -36,23 +37,22 @@ class GetAnnouncements : ObservableObject {
                     for i in snap!.documents {
                         
                         print("Loop: \(i.data().count)")
-                       /* let result = Result {
-                            //try i.data(as: Announcement)
-                            //try i.data(as: Announcement.self)
+                       let result = Result {
+                            try i.data(as: Announcement.self)
                         }
                         
                         switch result {
-                        case .success(let meal):
-                            if let meal = meal {
-                                print("CustomerMenuContentView, getting data from Firebase : \(meal.name)")
-                                self.announcementList.append(meal)
+                        case .success(let announcement):
+                            if let announcement = announcement {
+                                print("CustomerMenuContentView, getting data from Firebase : \(announcement.info)")
+                                self.announcementList.append(announcement)
                             } else {
                                 print("CustomerMenuContentView, getting data from Firebase : No data")
                             }
                         case .failure(let error):
                             print("CustomerMenuContentView, getting data from Firebase, Error: \(error)")
                         }
-                        */
+                        
                         
                         
                     }
@@ -61,29 +61,7 @@ class GetAnnouncements : ObservableObject {
             }
         }
         
-       /*
-        
-                  
-                        
-                        let result = Result {
-                            try i.data(as: MealClass.self)
-                        }
-                        switch result {
-                        case .success(let meal):
-                            if let meal = meal {
-                                print("EditMenuContentView, getting data from Firebase: \(meal.name)")
-                                self.mealList.append(meal)
-                            } else {
-                                print("EditMenuContentView, getting data from Firebase: No data")
-                            }
-                        case .failure(let error):
-                            print("EditMenuContentView, getting data from Firebase: Error: \(error)")
-                        }
-                    }
-                }
-            }
-            
-        }*/
+       
     }
     
 }

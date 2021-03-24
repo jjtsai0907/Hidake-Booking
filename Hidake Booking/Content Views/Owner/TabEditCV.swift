@@ -18,11 +18,11 @@ struct TabEditCV: View {
                     Text("編輯目錄")
                 }
             
-            /*EditDetailsSheetCV()
+            EditAnnouncementCV()
                 .tabItem {
-                    Image(systemName: "rectangle.and.pencil.and.ellipsis")
-                    Text("編輯行程")
-                }*/
+                    Image(systemName: "bell.fill")
+                    Text("新增公告")
+                }
         }
         
         
