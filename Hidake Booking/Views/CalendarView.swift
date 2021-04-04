@@ -15,6 +15,7 @@ import FirebaseFirestore
 
 struct CalendarRepresentable: UIViewRepresentable {
     
+    @Binding var category: String
     @Binding var selectedDateActivities: [Activity]
     
     typealias UIViewType = FSCalendar
@@ -22,6 +23,8 @@ struct CalendarRepresentable: UIViewRepresentable {
     @Binding var selectedDate: Date
     
     @Binding var dateString: String
+    
+    
     
     func updateUIView(_ uiView: FSCalendar, context: Context) {
         
@@ -87,7 +90,7 @@ struct CalendarRepresentable: UIViewRepresentable {
             
             print("Calender1")
             
-            Firestore.firestore().collection("奇萊山\(parent.dateString)").addSnapshotListener { (snap, err) in
+            Firestore.firestore().collection("\(parent.category)\(parent.dateString)").addSnapshotListener { (snap, err) in
                 if err != nil {
                     print("CalendarView, get selected date date error: \(String(describing: err))")
                     return

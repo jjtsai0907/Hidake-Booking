@@ -13,6 +13,7 @@ import FirebaseFirestore
 struct CalenderCV: View {
     
     var activity: String
+    @State var category = ""
     @State var selectedDate = Date()
     
     var groups = ["Group A   台幣 6500 ", "Group B   台幣 6800 "]
@@ -43,7 +44,7 @@ struct CalenderCV: View {
         VStack {
             
          
-            CalendarRepresentable(selectedDateActivities: $selectedDateActivities, selectedDate: $selectedDate, dateString: $dateString)
+            CalendarRepresentable(category: $category, selectedDateActivities: $selectedDateActivities, selectedDate: $selectedDate, dateString: $dateString)
                 .padding()
                 .frame(height: 400)
       
@@ -116,6 +117,9 @@ struct CalenderCV: View {
             
             
         }.navigationTitle(activity)
+        .onAppear{
+            category = activity
+        }
         
         
         
