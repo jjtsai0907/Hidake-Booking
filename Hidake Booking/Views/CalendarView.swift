@@ -9,9 +9,14 @@ import Foundation
 import FSCalendar
 import UIKit
 import SwiftUI
+import FirebaseFirestore
+
 
 
 struct CalendarRepresentable: UIViewRepresentable {
+    
+    @Binding var selectedDateActivities: [Activity]
+    
     typealias UIViewType = FSCalendar
     var calendar = FSCalendar()
     @Binding var selectedDate: Date
@@ -51,6 +56,8 @@ struct CalendarRepresentable: UIViewRepresentable {
         var parent: CalendarRepresentable
         var formatter = DateFormatter()
         
+        
+        
         init(_ parent: CalendarRepresentable) {
             self.parent = parent
         }
@@ -61,9 +68,9 @@ struct CalendarRepresentable: UIViewRepresentable {
         }
         
         func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-            formatter.dateFormat = "yyyy-MM-dd"
+            formatter.dateFormat = "MM-dd"
             
-            if date ==  formatter.date(from: "2021-04-08"){
+            if date ==  formatter.date(from: "04-08"){
                 return 2
             }
         
@@ -71,12 +78,65 @@ struct CalendarRepresentable: UIViewRepresentable {
         }
         
         func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-            formatter.dateFormat = "yyyy-MM-dd"
-            print("Date:  \(formatter.string(from: date))")
+            formatter.dateFormat = "MM-dd"
+            print("Calender Date:  \(formatter.string(from: date))")
             parent.selectedDate = date
             
             parent.dateString = formatter.string(from: date)
+            
+            
+            print("Calender1")
+            
+            Firestore.firestore().collection("奇萊山\(parent.dateString)").addSnapshotListener { (snap, err) in
+                if err != nil {
+                    print("CalendarView, get selected date date error: \(String(describing: err))")
+                    return
+                } else {
+                    
+                    print("Calender2")
+                    if snap != nil {
+                        self.parent.selectedDateActivities = []
+                        print("Calender3")
+                        for i in snap!.documents {
+                            
+                            print("CalendarView Loop: \(i.data().count)")
+                           let result = Result {
+                                try i.data(as: Activity.self)
+                            }
+                            
+                            switch result {
+                            case .success(let announcement):
+                                if let announcement = announcement {
+                                    print("CalendarView, getting data from Firebase : \(announcement.groupName)")
+                                    self.parent.selectedDateActivities.append(announcement)
+                                    print("Calender5")
+                                } else {
+                                    print("CalendarView, getting data from Firebase : No data")
+                                    print("Calender6")
+                                }
+                            case .failure(let error):
+                                print("CalendarView, getting data from Firebase, Error: \(error)")
+                            }
+                            
+                            
+                            
+                        }
+                    }
+                    print("Calender4")
+                }
+            }
+            
+            
+            
+            
         }
+        
+        
+        
+        
+        
+        
+        
         
         func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
             
@@ -96,8 +156,8 @@ struct CalendarRepresentable: UIViewRepresentable {
         
         // show different colour of dates Not working at the moment
         func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDetaultColorFor date: Date) -> UIColor? {
-            formatter.dateFormat = "yyyy-MM-dd"
-            guard let example = formatter.date(from: "2021-04-08") else {return nil}
+            formatter.dateFormat = "MM-dd"
+            guard let example = formatter.date(from: "04-08") else {return nil}
                 if date.compare(example) == .orderedSame {
                     return .red
                 } else {
@@ -112,52 +172,3 @@ struct CalendarRepresentable: UIViewRepresentable {
     
 }
 
-
-/*
-struct CalendarController: UIViewControllerRepresentable {
-    
-    @Binding var selectedDate : Date
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<CalendarController>) -> calendars {
-        return calendars()
-    }
-
-    func updateUIViewController(_ uiViewController: calendars, context: UIViewControllerRepresentableContext<CalendarController>) {
-    }
-    
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
-        selectedDate = date
-        print("Hellow \(date)")
-    }
-    
-    class calendars: UIViewController, FSCalendarDelegate{
-        var calendar = FSCalendar()
-        
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            calendar.delegate = self
-        }
-
-        override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            calendar.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width)
-            view.addSubview(calendar)
-        }
-        
-        
-    }
-}
-
-
-*/
-
-
-/*
-let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
-calendar.dataSource = self
-calendar.delegate = self
-view.addSubview(calendar)
-self.calendar = calendar
-*/

@@ -9,10 +9,12 @@ import Foundation
 
 class Activity: Codable, Identifiable, ObservableObject {
     
+    
     var id: String = UUID().uuidString
     var groupName: String = "Default"
     var date: String = "Default"
     var seatsLeft: Int = 0
+    var category: String = "Default"
     
     /*init(info: String) {
         self.info = info

@@ -27,7 +27,7 @@ struct EditAnnouncementCV: View {
                 
                 do {
                     try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
-                    
+                    announcementValue = ""
                     
                 } catch let error {
                     print("Error writing city to Firestore: \(error)")

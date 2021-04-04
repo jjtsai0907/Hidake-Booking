@@ -7,6 +7,8 @@
 
 import SwiftUI
 import FSCalendar
+import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 struct CalenderCV: View {
     
@@ -21,21 +23,30 @@ struct CalenderCV: View {
     
     @State var dateString = ""
     
+    @State var selectedDateActivities = [Activity]()
+    
+    
+    
+    /*
+     @StateObject var jiaMingLakeList : GetJiaMingLakeDates {
+        get {
+            return GetJiaMingLakeDates(category: activity)
+        }
+    }
+     */
+    // ----
+     
+    @StateObject var jiaMingLakeList = GetJiaMingLakeDates()
     
     var body: some View {
         
         VStack {
             
          
-            CalendarRepresentable(selectedDate: $selectedDate, dateString: $dateString)
+            CalendarRepresentable(selectedDateActivities: $selectedDateActivities, selectedDate: $selectedDate, dateString: $dateString)
                 .padding()
                 .frame(height: 400)
-                
-                    
-            //Text("\(selectedDate)")
-            //Text("\(dateString)")
-            
-            
+      
             Spacer()
             
             //Text("\(dateString)  Event: 1. go hiking 2. Eating")
@@ -45,22 +56,23 @@ struct CalenderCV: View {
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .padding(30)*/
             
+            Text(dateString)
             
-            List {
+            List (selectedDateActivities) { group in
+                HStack {
+                    
+                    
+                    Text("\(group.groupName)")
+                    
+                    Spacer()
+                    Text("剩餘名額 \(group.seatsLeft)")
+                        .foregroundColor(.red)
                 
-                ForEach (groups, id: \.self) { group in
-                    HStack{
-                        if dateString == "2021-04-08" {
-                        //Text("\(dateString)")
-                        Text("\(group)")
-                        Spacer()
-                        Text(" 剩餘名額 5 ")
-                            .foregroundColor(.red)
-                    }
-                    }
                 }
-
+                
+                
             }
+        
             
             
             HStack{

@@ -20,6 +20,7 @@ struct EditActivityCalenderCV: View {
     @State private var activitySeatValue = ""
     
     
+    
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
@@ -29,12 +30,8 @@ struct EditActivityCalenderCV: View {
     var body: some View {
         
         VStack {
-            /*DatePicker("Pick a date", selection: $activityDateValue, in: Date()..., displayedComponents: .date)
-            .datePickerStyle(GraphicalDatePickerStyle())
-            .padding(30)
             
-            Text("\(activityDateValue, formatter: dateFormatter)")*/
-            TextFieldView(placeHolder: "日期...5/4-5/6", textValue:  $activityDateValue)
+            TextFieldView(placeHolder: "日期...05-04", textValue:  $activityDateValue)
             TextFieldView(placeHolder: "團名...", textValue:  $activityNameValue)
             TextFieldView(placeHolder: "成團人數...", textValue: $activitySeatValue)
             
@@ -45,14 +42,15 @@ struct EditActivityCalenderCV: View {
                 activity.groupName = activityNameValue
                 activity.date = activityDateValue
                 activity.seatsLeft = Int(activitySeatValue) ?? 0
-                
+                activity.category = activityName
                 print("EditActivityCalenderCV: pressed")
                 do {
-                    try db.collection(activityName).document(activity.id).setData(from: activity)
+                    try db.collection("\(activityName)\(activityDateValue)").document(activity.id).setData(from: activity)
                     
                     activityNameValue = ""
                     activityDateValue = ""
                     activitySeatValue = ""
+                   
                     
                 } catch let error {
                     print("Error writing city to Firestore: \(error)")
