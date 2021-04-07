@@ -175,3 +175,44 @@ class GetDates : ObservableObject {
     }
     
 }
+
+
+
+class GetDatesWithActivity : ObservableObject {
+    
+    @Published var datesWithActivitiesList = [String]()
+    
+    
+    init() {
+        
+        let db = Firestore.firestore()
+        db.collection("DATE_LIST").document("DATE_LIST").getDocument { (snap, err) in
+            if err != nil {
+                print("GetData GetDatesWithActivities, info collection error: \(String(describing: err))")
+                return
+            } else {
+                
+                
+                if snap != nil {
+                    
+                    
+                    let dataDescription = snap!.data().map(String.init(describing:)) ?? "nil"
+                    print("UUUUUUUUUUU \(dataDescription)")
+                    
+                    let items = snap!.get("dates") as! [String]
+                                print("UUUUUUUUU Items \(items)")
+                                for item in items {
+                                    print("UUUUUUUUU Item \(item)")
+                                    self.datesWithActivitiesList.append(item)
+                                }
+                    
+                }
+                
+            }
+        }
+        
+       
+    }
+    
+}
+

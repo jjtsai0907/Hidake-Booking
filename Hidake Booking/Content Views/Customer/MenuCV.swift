@@ -29,7 +29,7 @@ struct MenuCV: View {
             CategoryView(categoryImage: "waterDrafting", categoryName: "野溪溫泉", activities: draftingCategory, activityIcon: "♨️")
             
             ZStack {
-                Image("camping")
+                Image("privateGroup")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)

@@ -25,8 +25,12 @@ struct CalenderCV: View {
     @State var dateString = ""
     
     @State var selectedDateActivities = [Activity]()
+    @State var datesWithActivity = GetDatesWithActivity()
     
     
+    @State var qq = [String]()
+    @State var showCalender = false
+    //@StateObject var datesWithActivities = GetDatesWithActivities()
     
     /*
      @StateObject var jiaMingLakeList : GetJiaMingLakeDates {
@@ -43,10 +47,12 @@ struct CalenderCV: View {
         
         VStack {
             
-         
-            CalendarRepresentable(category: $category, selectedDateActivities: $selectedDateActivities, selectedDate: $selectedDate, dateString: $dateString)
-                .padding()
-                .frame(height: 400)
+            if showCalender {
+                CalendarRepresentable(datesWithActivity: $qq, category: $category, selectedDateActivities: $selectedDateActivities, selectedDate: $selectedDate, dateString: $dateString)
+                    .padding()
+                    .frame(height: 400)
+            }
+            
       
             Spacer()
             
@@ -119,6 +125,35 @@ struct CalenderCV: View {
         }.navigationTitle(activity)
         .onAppear{
             category = activity
+            
+            
+            let db = Firestore.firestore()
+            db.collection("DATE_LIST").document("DATE_LIST").getDocument { (snap, err) in
+                if err != nil {
+                    print("GetData GetDatesWithActivities, info collection error: \(String(describing: err))")
+                    return
+                } else {
+                    
+                    
+                    if snap != nil {
+                        
+                        
+                        let dataDescription = snap!.data().map(String.init(describing:)) ?? "nil"
+                        print("UUUUUUUUUUU \(dataDescription)")
+                        
+                        let items = snap!.get("dates") as! [String]
+                                    print("UUUUUUUUU Items \(items)")
+                                    for item in items {
+                                        print("UUUUUUUUU Item \(item)")
+                                        self.qq.append(item)
+                                    }
+                        showCalender = true
+                    }
+                    
+                }
+            }
+            
+            
         }
         
         

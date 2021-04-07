@@ -10,10 +10,18 @@ import FSCalendar
 import UIKit
 import SwiftUI
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 
 
 struct CalendarRepresentable: UIViewRepresentable {
+    
+   
+    @Binding var datesWithActivity: [String]
+    
+    
+    //@State var numberOfActivities = 0
+    
     
     @Binding var category: String
     @Binding var selectedDateActivities: [Activity]
@@ -35,9 +43,10 @@ struct CalendarRepresentable: UIViewRepresentable {
         calendar.dataSource = context.coordinator
         //calendar.allowsMultipleSelection = true
         
-        
+       
         calendar.appearance.eventDefaultColor = .orange
         //calendar.appearance.eventOffset
+        calendar.appearance.eventSelectionColor = .red
         
         
         return calendar
@@ -49,36 +58,59 @@ struct CalendarRepresentable: UIViewRepresentable {
     
     
     
-    /*func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
-        selectedDate = date
-        print("Hellow \(date)")
-    }*/
-    
     class Coordinator: NSObject, FSCalendarDelegate, FSCalendarDataSource {
+        
+        
+        //@State var datesWithActivities = GetDatesWithActivities()
         var parent: CalendarRepresentable
         var formatter = DateFormatter()
-        
         
         
         init(_ parent: CalendarRepresentable) {
             self.parent = parent
         }
         
+        func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+            formatter.dateFormat = "MM-dd"
+            let dateString = formatter.string(from: date)
+            //var qq = parent.datesWithActivity
+            
+            if parent.datesWithActivity.contains(dateString) {
+                print(parent.datesWithActivity)
+                return 1
+            } else {
+                print(parent.datesWithActivity)
+                return 0
+            }
+            
+            
+            
+           /* if datesWithActivities.datesWithActivitiesList.contains(dateString) {
+                
+                
+                return 1
+                
+                
+            } else {
+                
+                return 0
+            }*/
+            
+           
+        }
+        
+        
         // Not displaying dates before current day
         func minimumDate(for calendar: FSCalendar) -> Date {
             return Date()
         }
         
-        func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-            formatter.dateFormat = "MM-dd"
-            
-            if date ==  formatter.date(from: "04-08"){
-                return 2
-            }
         
-            return 0
-        }
+        
+        
+        
+        
+        
         
         func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
             formatter.dateFormat = "MM-dd"
@@ -150,8 +182,8 @@ struct CalendarRepresentable: UIViewRepresentable {
         
         /*func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
             
-        }*/
-        
+        }
+        */
         func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
             print("Cancel Date:  \(formatter.string(from: date))")
         }
@@ -160,6 +192,7 @@ struct CalendarRepresentable: UIViewRepresentable {
         // show different colour of dates Not working at the moment
         func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDetaultColorFor date: Date) -> UIColor? {
             formatter.dateFormat = "MM-dd"
+            
             guard let example = formatter.date(from: "04-08") else {return nil}
                 if date.compare(example) == .orderedSame {
                     return .red
@@ -170,6 +203,16 @@ struct CalendarRepresentable: UIViewRepresentable {
             
         }
         
+        
+        
+        func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
+            let eventScaleFactor: CGFloat = 2.8
+            cell.eventIndicator.transform = CGAffineTransform(scaleX: eventScaleFactor, y: eventScaleFactor)
+        }
+        
+        
+        
+               
     }
     
     

@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct RegisterCV: View {
     
@@ -31,6 +34,14 @@ struct RegisterCV: View {
             
             Button(action: {
                 print("RegisterCV: Register Button Pressed!")
+                
+                
+                /*Firestore.firestore().collection("DATE_LIST").document("DATE_LIST").updateData([
+                    "dates": FieldValue.arrayUnion(["05-30"])
+                ])*/
+                
+                
+                
                 registered = true
             }){
                 Text("註冊")
