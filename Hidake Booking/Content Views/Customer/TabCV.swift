@@ -30,7 +30,7 @@ struct TabCV: View {
                     Image(systemName: "person.fill")
                     Text("我的")
                 }
-        }
+        }.navigationTitle("日岳 Hidake")
     }
 }
 

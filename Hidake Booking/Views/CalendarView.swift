@@ -106,12 +106,6 @@ struct CalendarRepresentable: UIViewRepresentable {
         }
         
         
-        
-        
-        
-        
-        
-        
         func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
             formatter.dateFormat = "MM-dd"
             print("Calender Date:  \(formatter.string(from: date))")

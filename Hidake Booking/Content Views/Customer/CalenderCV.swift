@@ -12,6 +12,8 @@ import FirebaseFirestore
 
 struct CalenderCV: View {
     
+    @State var showingBookingSite = false
+    
     var activity: String
     @State var category = ""
     @State var selectedDate = Date()
@@ -107,6 +109,9 @@ struct CalenderCV: View {
                 
                 Button(action: {
                     print("CalenderCV: pressed")
+                    
+                    showingBookingSite = true
+                    
                 }){
                     Text("報名")
                         .bold()
@@ -157,7 +162,9 @@ struct CalenderCV: View {
         }
         
         
-        
+        NavigationLink(destination: BookingCV(), isActive: $showingBookingSite) {
+            Text("")
+        }
         
     }
 }

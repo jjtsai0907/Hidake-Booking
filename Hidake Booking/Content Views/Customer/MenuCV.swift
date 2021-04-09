@@ -26,7 +26,7 @@ struct MenuCV: View {
             CategoryView(categoryImage: "medium", categoryName: "中階百岳", activities: mediumCategory, activityIcon: "🏃🏻‍♂️")
             CategoryView(categoryImage: "advanced", categoryName: "高階百岳", activities: advancedCategory, activityIcon: "🦊")
             CategoryView(categoryImage: "camping", categoryName: "露營之旅", activities: campingCategory, activityIcon: "🏖")
-            CategoryView(categoryImage: "waterDrafting", categoryName: "野溪溫泉", activities: draftingCategory, activityIcon: "♨️")
+            CategoryView(categoryImage: "hotSpring", categoryName: "野溪溫泉", activities: draftingCategory, activityIcon: "♨️")
             
             ZStack {
                 Image("privateGroup")
@@ -43,7 +43,7 @@ struct MenuCV: View {
                             .font(.title)
                             .foregroundColor(.white)
                     }
-                }
+                }.navigationTitle("Activities")
                 
                 NavigationLink(
                     destination: Text("Destination"),
@@ -55,8 +55,9 @@ struct MenuCV: View {
                 showingBooking = true
             }
             
-        }.padding(.top, 30)
-        .navigationTitle("Advantures")
+        }.navigationTitle("Activities")
+        .padding(.top, 30)
+        
         
         
         

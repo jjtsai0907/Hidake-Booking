@@ -38,6 +38,8 @@
 		B9A55810260ACFA6007FDE19 /* EditAnnouncementCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5580F260ACFA6007FDE19 /* EditAnnouncementCV.swift */; };
 		B9A5581D260AD55B007FDE19 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5581C260AD55B007FDE19 /* Activity.swift */; };
 		B9A7A816260A21FD005F4D70 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7A815260A21FD005F4D70 /* Announcement.swift */; };
+		B9A91C78261FF317006198D9 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A91C77261FF317006198D9 /* Webview.swift */; };
+		B9A91C7D261FF6AB006198D9 /* BookingCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A91C7C261FF6AB006198D9 /* BookingCV.swift */; };
 		B9FBA22F25FF1F01000CF548 /* EditActivityCalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FBA22E25FF1F01000CF548 /* EditActivityCalenderCV.swift */; };
 		D451F4C69EBCE8E41F6A7B23 /* Pods_Hidake_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E13ED8BFE2FCD601EC3109 /* Pods_Hidake_BookingTests.framework */; };
 		EE0C72652ABD8D27890C066F /* Pods_Hidake_Booking_Hidake_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */; };
@@ -103,6 +105,8 @@
 		B9A5580F260ACFA6007FDE19 /* EditAnnouncementCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAnnouncementCV.swift; sourceTree = "<group>"; };
 		B9A5581C260AD55B007FDE19 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B9A7A815260A21FD005F4D70 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		B9A91C77261FF317006198D9 /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
+		B9A91C7C261FF6AB006198D9 /* BookingCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCV.swift; sourceTree = "<group>"; };
 		B9FBA22E25FF1F01000CF548 /* EditActivityCalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditActivityCalenderCV.swift; sourceTree = "<group>"; };
 		D60FFF4CAD78223A4377BD47 /* Pods-Hidake BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake BookingTests.debug.xcconfig"; path = "Target Support Files/Pods-Hidake BookingTests/Pods-Hidake BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9605DBC12DF80260C744073 /* Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; path = "Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				B9227AC82609BC8000982C66 /* GetDatas.swift */,
 				B9A7A815260A21FD005F4D70 /* Announcement.swift */,
 				B9A5581C260AD55B007FDE19 /* Activity.swift */,
+				B9A91C77261FF317006198D9 /* Webview.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				B9221EB025F846E5000FF3BB /* LoginCV.swift */,
 				B965B82E25FC563B004928EB /* MeCV.swift */,
 				B965B82925FC5486004928EB /* AnnouncementCV.swift */,
+				B9A91C7C261FF6AB006198D9 /* BookingCV.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -572,7 +578,9 @@
 				B9A5581D260AD55B007FDE19 /* Activity.swift in Sources */,
 				B965B82F25FC563B004928EB /* MeCV.swift in Sources */,
 				B9A7A816260A21FD005F4D70 /* Announcement.swift in Sources */,
+				B9A91C7D261FF6AB006198D9 /* BookingCV.swift in Sources */,
 				B901EC2E25FE3558009E28CC /* EditCategortView.swift in Sources */,
+				B9A91C78261FF317006198D9 /* Webview.swift in Sources */,
 				B965B82A25FC5486004928EB /* AnnouncementCV.swift in Sources */,
 				B967648E25FCFFE600DFE368 /* OwnerCV.swift in Sources */,
 				B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */,
