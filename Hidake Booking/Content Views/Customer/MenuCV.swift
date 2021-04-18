@@ -11,17 +11,18 @@ struct MenuCV: View {
     
     @State private var showingBooking = false
     
-    
+    var oneDayCategory = ["目前無團"]
     var easyCategory = ["玉山", "嘉明湖", "奇萊山", "雪山"]
     var mediumCategory = ["目前無團"]
     var advancedCategory = ["目前無團"]
-    var campingCategory = ["加羅湖", "松蘿湖"]
+    var campingCategory = ["北部", "中部", "東部", "南部"]
     var draftingCategory = ["栗松溫泉"]
     
     var body: some View {
         
         List {
             
+            CategoryView(categoryImage: "oneDay", categoryName: "新手登山", activities: oneDayCategory, activityIcon: "🧒🏻")
             CategoryView(categoryImage: "easy", categoryName: "初階百岳", activities: easyCategory, activityIcon: "👨🏻‍🦯")
             CategoryView(categoryImage: "medium", categoryName: "中階百岳", activities: mediumCategory, activityIcon: "🏃🏻‍♂️")
             CategoryView(categoryImage: "advanced", categoryName: "高階百岳", activities: advancedCategory, activityIcon: "🦊")
@@ -46,12 +47,14 @@ struct MenuCV: View {
                 }.navigationTitle("Activities")
                 
                 NavigationLink(
-                    destination: Text("Destination"),
+                    destination: PrivateBookingCV(),
                     isActive: $showingBooking,
                     label: {
                         Text("")
                     })
             }.onTapGesture {
+                
+                
                 showingBooking = true
             }
             

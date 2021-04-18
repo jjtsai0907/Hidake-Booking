@@ -70,60 +70,10 @@ class GetAnnouncements : ObservableObject {
 
 
 
-class GetJiaMingLakeDates : ObservableObject {
-    
-    @Published var jiaMingLakeList = [Activity]()
-    
-    
-    init() {
-        
-        
-        
-        let db = Firestore.firestore()
-        db.collection("雪山").addSnapshotListener { (snap, err) in
-            if err != nil {
-                print("GetData, info collection error: \(String(describing: err))")
-                return
-            } else {
-                
-                
-                if snap != nil {
-                    self.jiaMingLakeList = []
-                    
-                    for i in snap!.documents {
-                        
-                        print("Loop: \(i.data().count)")
-                       let result = Result {
-                            try i.data(as: Activity.self)
-                        }
-                        
-                        switch result {
-                        case .success(let activity):
-                            if let activity = activity {
-                                print("CustomerMenuContentView, getting data from Firebase : \(activity.groupName)")
-                                self.jiaMingLakeList.append(activity)
-                            } else {
-                                print("CustomerMenuContentView, getting data from Firebase : No data")
-                            }
-                        case .failure(let error):
-                            print("CustomerMenuContentView, getting data from Firebase, Error: \(error)")
-                        }
-                        
-                        
-                        
-                    }
-                }
-                
-            }
-        }
-        
-       
-    }
-    
-}
 
 
 
+/*
 class GetDates : ObservableObject {
     
     @Published var dates = [Activity]()
@@ -156,6 +106,12 @@ class GetDates : ObservableObject {
                             if let activity = activity {
                                 print("CustomerMenuContentView, getting data from Firebase : \(activity.groupName)")
                                 self.dates.append(activity)
+                                
+                                if activity.seatsLeft <= 2 {
+                                    send()
+                                }
+                                
+                                
                             } else {
                                 print("CustomerMenuContentView, getting data from Firebase : No data")
                             }
@@ -171,13 +127,26 @@ class GetDates : ObservableObject {
             }
         }
         
-       
+        func send() {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (_, _) in
+                
+            }
+            
+            let content = UNMutableNotificationContent()
+            content.title = "只剩下２個名額了！"
+            content.body = "快來哦！！"
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let req = UNNotificationRequest(identifier: "req", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+        }
     }
     
 }
+*/
 
-
-
+/*
 class GetDatesWithActivity : ObservableObject {
     
     @Published var datesWithActivitiesList = [String]()
@@ -216,3 +185,4 @@ class GetDatesWithActivity : ObservableObject {
     
 }
 
+*/

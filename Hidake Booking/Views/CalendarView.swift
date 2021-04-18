@@ -83,19 +83,7 @@ struct CalendarRepresentable: UIViewRepresentable {
                 return 0
             }
             
-            
-            
-           /* if datesWithActivities.datesWithActivitiesList.contains(dateString) {
-                
-                
-                return 1
-                
-                
-            } else {
-                
-                return 0
-            }*/
-            
+    
            
         }
         
@@ -134,10 +122,10 @@ struct CalendarRepresentable: UIViewRepresentable {
                             }
                             
                             switch result {
-                            case .success(let announcement):
-                                if let announcement = announcement {
-                                    print("CalendarView, getting data from Firebase : \(announcement.groupName)")
-                                    self.parent.selectedDateActivities.append(announcement)
+                            case .success(let activity):
+                                if let activity = activity {
+                                    print("CalendarView, getting data from Firebase : \(activity.groupName)")
+                                    self.parent.selectedDateActivities.append(activity)
                                     print("Calender5")
                                 } else {
                                     print("CalendarView, getting data from Firebase : No data")

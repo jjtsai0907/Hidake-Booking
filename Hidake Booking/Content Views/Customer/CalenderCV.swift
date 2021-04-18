@@ -9,6 +9,7 @@ import SwiftUI
 import FSCalendar
 import FirebaseFirestoreSwift
 import FirebaseFirestore
+import UserNotifications
 
 struct CalenderCV: View {
     
@@ -27,23 +28,14 @@ struct CalenderCV: View {
     @State var dateString = ""
     
     @State var selectedDateActivities = [Activity]()
-    @State var datesWithActivity = GetDatesWithActivity()
+//  @State var datesWithActivity = GetDatesWithActivity()
     
     
     @State var qq = [String]()
     @State var showCalender = false
-    //@StateObject var datesWithActivities = GetDatesWithActivities()
-    
-    /*
-     @StateObject var jiaMingLakeList : GetJiaMingLakeDates {
-        get {
-            return GetJiaMingLakeDates(category: activity)
-        }
-    }
-     */
-    // ----
+  
      
-    @StateObject var jiaMingLakeList = GetJiaMingLakeDates()
+    
     
     var body: some View {
         
@@ -57,13 +49,7 @@ struct CalenderCV: View {
             
       
             Spacer()
-            
-            //Text("\(dateString)  Event: 1. go hiking 2. Eating")
-            //FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
-            
-            /*DatePicker("Pick a date", selection: $selectedDate, in: Date()..., displayedComponents: .date)
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .padding(30)*/
+           
             
             Text(dateString)
             
@@ -112,6 +98,7 @@ struct CalenderCV: View {
                     
                     showingBookingSite = true
                     
+                    
                 }){
                     Text("報名")
                         .bold()
@@ -133,7 +120,7 @@ struct CalenderCV: View {
             
             
             let db = Firestore.firestore()
-            db.collection("DATE_LIST").document("DATE_LIST").getDocument { (snap, err) in
+            db.collection("\(category)DATE_LIST").document("DATE_LIST").getDocument { (snap, err) in
                 if err != nil {
                     print("GetData GetDatesWithActivities, info collection error: \(String(describing: err))")
                     return
@@ -162,11 +149,16 @@ struct CalenderCV: View {
         }
         
         
-        NavigationLink(destination: BookingCV(), isActive: $showingBookingSite) {
+        NavigationLink(destination: BookingCV(bookingCategory: $category), isActive: $showingBookingSite) {
             Text("")
         }
         
+        
     }
+    
+    
+    
+    
 }
 
 /*

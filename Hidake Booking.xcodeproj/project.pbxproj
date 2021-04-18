@@ -16,6 +16,7 @@
 		B9221EBA25F84C91000FF3BB /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EB925F84C91000FF3BB /* TextFieldView.swift */; };
 		B9221EC225F86334000FF3BB /* RegisterCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EC125F86334000FF3BB /* RegisterCV.swift */; };
 		B9227AC92609BC8000982C66 /* GetDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9227AC82609BC8000982C66 /* GetDatas.swift */; };
+		B935BCB92623351200DB68F1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B935BCB82623351200DB68F1 /* HealthKit.framework */; };
 		B9444AF725F8407E00EF50B6 /* Hidake_BookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444AF625F8407E00EF50B6 /* Hidake_BookingApp.swift */; };
 		B9444AF925F8407E00EF50B6 /* EntryCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444AF825F8407E00EF50B6 /* EntryCV.swift */; };
 		B9444AFB25F8408000EF50B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9444AFA25F8408000EF50B6 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		B98A2C5C25FA1B33002D1ACF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */; };
 		B98A2C6425FB06ED002D1ACF /* CalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */; };
 		B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */; };
+		B999DDD5262C16BF003ACB4C /* PrivateBookingCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999DDD4262C16BF003ACB4C /* PrivateBookingCV.swift */; };
 		B9A55810260ACFA6007FDE19 /* EditAnnouncementCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5580F260ACFA6007FDE19 /* EditAnnouncementCV.swift */; };
 		B9A5581D260AD55B007FDE19 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5581C260AD55B007FDE19 /* Activity.swift */; };
 		B9A7A816260A21FD005F4D70 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7A815260A21FD005F4D70 /* Announcement.swift */; };
@@ -78,6 +80,8 @@
 		B9221EB925F84C91000FF3BB /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		B9221EC125F86334000FF3BB /* RegisterCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCV.swift; sourceTree = "<group>"; };
 		B9227AC82609BC8000982C66 /* GetDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDatas.swift; sourceTree = "<group>"; };
+		B935BCB72623351200DB68F1 /* Hidake Booking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hidake Booking.entitlements"; sourceTree = "<group>"; };
+		B935BCB82623351200DB68F1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B9444AF325F8407E00EF50B6 /* Hidake Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hidake Booking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9444AF625F8407E00EF50B6 /* Hidake_BookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hidake_BookingApp.swift; sourceTree = "<group>"; };
 		B9444AF825F8407E00EF50B6 /* EntryCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCV.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B98A2C6325FB06ED002D1ACF /* CalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCV.swift; sourceTree = "<group>"; };
 		B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSheet.swift; sourceTree = "<group>"; };
+		B999DDD4262C16BF003ACB4C /* PrivateBookingCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateBookingCV.swift; sourceTree = "<group>"; };
 		B9A5580F260ACFA6007FDE19 /* EditAnnouncementCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAnnouncementCV.swift; sourceTree = "<group>"; };
 		B9A5581C260AD55B007FDE19 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B9A7A815260A21FD005F4D70 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B935BCB92623351200DB68F1 /* HealthKit.framework in Frameworks */,
 				B965B82025FB85C1004928EB /* FSCalendar in Frameworks */,
 				15CFC5FD18F70ACE09542CA9 /* Pods_Hidake_Booking.framework in Frameworks */,
 			);
@@ -157,6 +163,7 @@
 		B4962A18ED476BBAA01AD017 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B935BCB82623351200DB68F1 /* HealthKit.framework */,
 				8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */,
 				A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */,
 				58E13ED8BFE2FCD601EC3109 /* Pods_Hidake_BookingTests.framework */,
@@ -224,6 +231,7 @@
 		B9444AF525F8407E00EF50B6 /* Hidake Booking */ = {
 			isa = PBXGroup;
 			children = (
+				B935BCB72623351200DB68F1 /* Hidake Booking.entitlements */,
 				B9227AC72609BC6400982C66 /* Models */,
 				B9221EB825F84C7D000FF3BB /* Views */,
 				B9221EAF25F846BF000FF3BB /* Content Views */,
@@ -286,6 +294,7 @@
 				B965B82E25FC563B004928EB /* MeCV.swift */,
 				B965B82925FC5486004928EB /* AnnouncementCV.swift */,
 				B9A91C7C261FF6AB006198D9 /* BookingCV.swift */,
+				B999DDD4262C16BF003ACB4C /* PrivateBookingCV.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -572,6 +581,7 @@
 			files = (
 				B967649325FD028700DFE368 /* TabEditCV.swift in Sources */,
 				B901EC3625FE429C009E28CC /* AddActivityCV.swift in Sources */,
+				B999DDD5262C16BF003ACB4C /* PrivateBookingCV.swift in Sources */,
 				B9227AC92609BC8000982C66 /* GetDatas.swift in Sources */,
 				B9FBA22F25FF1F01000CF548 /* EditActivityCalenderCV.swift in Sources */,
 				B901EC2525FE174A009E28CC /* EditDetailsSheet.swift in Sources */,
@@ -754,6 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hidake Booking/Hidake Booking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hidake Booking/Preview Content\"";
 				DEVELOPMENT_TEAM = C29T459B7W;
@@ -777,6 +788,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hidake Booking/Hidake Booking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hidake Booking/Preview Content\"";
 				DEVELOPMENT_TEAM = C29T459B7W;
