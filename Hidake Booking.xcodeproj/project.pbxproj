@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		15CFC5FD18F70ACE09542CA9 /* Pods_Hidake_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */; };
+		B901BC2A262DB56000033AE6 /* ContactSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901BC29262DB56000033AE6 /* ContactSheet.swift */; };
+		B901BC2F262DB88C00033AE6 /* ContactInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901BC2E262DB88C00033AE6 /* ContactInfoRow.swift */; };
 		B901EC2025FE161F009E28CC /* EditMenuCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901EC1F25FE161F009E28CC /* EditMenuCV.swift */; };
 		B901EC2525FE174A009E28CC /* EditDetailsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901EC2425FE174A009E28CC /* EditDetailsSheet.swift */; };
 		B901EC2E25FE3558009E28CC /* EditCategortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901EC2D25FE3558009E28CC /* EditCategortView.swift */; };
@@ -73,6 +75,8 @@
 		8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hidake_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hidake_Booking_Hidake_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA42465845BEBE1FC63F88A /* Pods-Hidake BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake BookingTests.release.xcconfig"; path = "Target Support Files/Pods-Hidake BookingTests/Pods-Hidake BookingTests.release.xcconfig"; sourceTree = "<group>"; };
+		B901BC29262DB56000033AE6 /* ContactSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSheet.swift; sourceTree = "<group>"; };
+		B901BC2E262DB88C00033AE6 /* ContactInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoRow.swift; sourceTree = "<group>"; };
 		B901EC1F25FE161F009E28CC /* EditMenuCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMenuCV.swift; sourceTree = "<group>"; };
 		B901EC2425FE174A009E28CC /* EditDetailsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDetailsSheet.swift; sourceTree = "<group>"; };
 		B901EC2D25FE3558009E28CC /* EditCategortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategortView.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 				B9A5581C260AD55B007FDE19 /* Activity.swift */,
 				B9A91C77261FF317006198D9 /* Webview.swift */,
 				B999DDD9262C21DB003ACB4C /* AnnouncementImageViewPicker.swift */,
+				B901BC29262DB56000033AE6 /* ContactSheet.swift */,
+				B901BC2E262DB88C00033AE6 /* ContactInfoRow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				B967649325FD028700DFE368 /* TabEditCV.swift in Sources */,
 				B901EC3625FE429C009E28CC /* AddActivityCV.swift in Sources */,
 				B999DDD5262C16BF003ACB4C /* PrivateBookingCV.swift in Sources */,
+				B901BC2F262DB88C00033AE6 /* ContactInfoRow.swift in Sources */,
 				B9227AC92609BC8000982C66 /* GetDatas.swift in Sources */,
 				B9FBA22F25FF1F01000CF548 /* EditActivityCalenderCV.swift in Sources */,
 				B901EC2525FE174A009E28CC /* EditDetailsSheet.swift in Sources */,
@@ -594,6 +601,7 @@
 				B9A91C7D261FF6AB006198D9 /* BookingCV.swift in Sources */,
 				B901EC2E25FE3558009E28CC /* EditCategortView.swift in Sources */,
 				B9A91C78261FF317006198D9 /* Webview.swift in Sources */,
+				B901BC2A262DB56000033AE6 /* ContactSheet.swift in Sources */,
 				B965B82A25FC5486004928EB /* AnnouncementCV.swift in Sources */,
 				B967648E25FCFFE600DFE368 /* OwnerCV.swift in Sources */,
 				B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */,
