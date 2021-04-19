@@ -7,27 +7,72 @@
 
 import SwiftUI
 import FirebaseFirestore
+import FirebaseFirestoreSwift
+
+
+extension String {
+        
+    func load() -> UIImage{
+            
+            // try catch block
+        do {
+                // convert String to URL
+            guard let url = URL(string: self) else{
+                    // return empty image if the URL is invalid
+                return UIImage()
+            }
+                // convert URL to data
+            let data: Data = try
+                Data(contentsOf: url)
+                
+                // create UIImage object from Data
+                // and optional value if the image in URL does not exists
+            return UIImage(data: data) ?? UIImage()
+        } catch{
+                
+        }
+            
+            
+        return UIImage()
+    }
+}
+    
 
 
 struct EditAnnouncementCV: View {
     @State var announcementValue = ""
     let db = Firestore.firestore()
+    @State var showImagePicker = false
+    @State var imageInBlackBox = UIImage(imageLiteralResourceName: "logo")
+    @State var downloadedImageURL = ""
     
     var body: some View {
         
         VStack {
+            
+            Image(uiImage: imageInBlackBox)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .onTapGesture {
+                    showImagePicker.toggle()
+                }.sheet(isPresented: $showImagePicker){
+                    AnnouncementImageViewPicker(isPresented: self.$showImagePicker, selectedImage: self.$imageInBlackBox, downloadedImageURL: $downloadedImageURL)
+                    
+                }
+            
             TextFieldView(placeHolder: "Enter: ", textValue: $announcementValue)
             
             Button(action: {
                 let announcement = Announcement()
                 
                 announcement.info = announcementValue
-                
+                announcement.imageURL = downloadedImageURL
                 
                 
                 do {
                     try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
                     announcementValue = ""
+                    print("EditAnnouncementCV: uploaded the announcement!")
                     
                 } catch let error {
                     print("Error writing city to Firestore: \(error)")

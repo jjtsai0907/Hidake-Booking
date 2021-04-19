@@ -11,6 +11,7 @@ class Announcement: Codable, Identifiable, ObservableObject {
     
     var id: String = UUID().uuidString
     var info: String = "Default"
+    var imageURL: String = ""
     
     /*init(info: String) {
         self.info = info

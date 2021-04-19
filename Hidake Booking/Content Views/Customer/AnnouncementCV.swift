@@ -23,8 +23,12 @@ struct AnnouncementCV: View {
         
         List (announcements.announcementList) { announcement in
             VStack {
-                
-                
+                //truckProfileDatas.datas.logoUrl.load()
+                Image(uiImage: announcement.imageURL.load())
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 200)
+                    .cornerRadius(8)
                 Text("\(announcement.info)")
                 
                 

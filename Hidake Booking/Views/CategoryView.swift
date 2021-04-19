@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct CategoryView: View {
     
     var categoryImage: String
@@ -17,6 +18,7 @@ struct CategoryView: View {
     @State var selectedActivity = ""
     
     @State var clicked = false
+    
     
     var body: some View {
         
