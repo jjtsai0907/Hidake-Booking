@@ -29,11 +29,18 @@ struct AnnouncementCV: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
                     .cornerRadius(8)
-                Text("\(announcement.info)")
+                HStack {
+                    Text("\(announcement.info)")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }.padding()
+                
+                    
                 
                 
                 
-            }
+            }.padding(.bottom, 20)
             
             
         }

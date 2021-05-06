@@ -43,16 +43,18 @@ struct EditAnnouncementCV: View {
     @State var announcementValue = ""
     let db = Firestore.firestore()
     @State var showImagePicker = false
-    @State var imageInBlackBox = UIImage(imageLiteralResourceName: "logo")
+    @State var imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
     @State var downloadedImageURL = ""
     
     var body: some View {
         
         VStack {
             
+            
             Image(uiImage: imageInBlackBox)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .padding()
                 .onTapGesture {
                     showImagePicker.toggle()
                 }.sheet(isPresented: $showImagePicker){
@@ -60,27 +62,44 @@ struct EditAnnouncementCV: View {
                     
                 }
             
-            TextFieldView(placeHolder: "Enter: ", textValue: $announcementValue)
+            TextFieldView(placeHolder: "輸入公告內容: ", textValue: $announcementValue)
+                .padding(.bottom, 20)
+                
             
-            Button(action: {
-                let announcement = Announcement()
-                
-                announcement.info = announcementValue
-                announcement.imageURL = downloadedImageURL
-                
-                
-                do {
-                    try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
-                    announcementValue = ""
-                    print("EditAnnouncementCV: uploaded the announcement!")
+            
+            if downloadedImageURL != "" && announcementValue != "" {
+                Button(action: {
+                    let announcement = Announcement()
                     
-                } catch let error {
-                    print("Error writing city to Firestore: \(error)")
-                }
-                
-            }){
-                Text("Upload Announcement")
+                    announcement.info = announcementValue
+                    announcement.imageURL = downloadedImageURL
+                    
+                    
+                    do {
+                        try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
+                        announcementValue = ""
+                        imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
+                        print("EditAnnouncementCV: uploaded the announcement!")
+                        
+                    } catch let error {
+                        print("Error writing city to Firestore: \(error)")
+                    }
+                    
+                }){
+                    Text("新增公告")
+                        .padding(.horizontal, 40)
+                        .padding(.vertical, 8)
+                        .foregroundColor(.white)
+                        .font(Font.headline.weight(.bold))
+                    
+                }.background(Color("themeBlue"))
+                .shadow(radius: 25)
+                .cornerRadius(10)
+                .padding(.top, 30)
             }
+            
+            Spacer()
+            
         }
         
         
