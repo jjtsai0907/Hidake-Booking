@@ -53,9 +53,18 @@ struct EditCategortView: View {
                 ForEach(activities, id: \.self){ activity in
                     
                     
+                    Button(action: {
+                            print("CategoryView: \(activity) clicked")
+                            self.selectedActivity = activity
+                            self.showingAddCalenderCV = true}){
+                        Text("\(activityIcon) \(activity)")
+                            .font(.title)
+                    }
                     
                     
-                    Text("\(activityIcon) \(activity)")
+                    
+                    
+                    /*Text("\(activityIcon) \(activity)")
                         .font(.title)
                         .onTapGesture {
                             print("CategoryView: \(activity) clicked")
@@ -68,7 +77,7 @@ struct EditCategortView: View {
                         NavigationLink(destination: EditActivityCalenderCV(activityName: selectedActivity), isActive: $showingAddCalenderCV){
                             
                         }
-                    }
+                    }*/
                     
                     
                 }
@@ -80,7 +89,7 @@ struct EditCategortView: View {
             
             
         }
-        
+        /*
         Button(action: {
             addNewTour()
             showingAddActivityCV.toggle()
@@ -98,9 +107,23 @@ struct EditCategortView: View {
         
         
         
-        NavigationLink(destination: AddActivityCV(category: categoryName), isActive: $showingAddActivityCV, label: {})
+        NavigationLink(destination: AddActivityCV(category: categoryName), isActive: $showingAddActivityCV, label: {}) */
+        
+        
+        
+        
         
         /*NavigationLink(destination: EditActivityCalenderCV(), isActive: $showingAddCalenderCV, label: {})*/
+        VStack {
+                            if selectedActivity != "" {
+                                
+                                NavigationLink(destination: EditActivityCalenderCV(activityName: selectedActivity), isActive: $showingAddCalenderCV){
+                                    EmptyView()
+                                }.hidden()
+                                
+                            }
+        }
+        
     }
     
     func addNewTour () {

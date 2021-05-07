@@ -55,15 +55,19 @@ struct CategoryView: View {
                                 Text("\(activityIcon) \(activity)")
                                     .font(.title)
                                     .onTapGesture {
-                                        print("CategoryView: \(activity) clicked")
+                                        
                                         selectedActivity = activity
-                                        showingCalender.toggle()
+                                        print("CategoryView: \(activity) clicked")
+                                        if selectedActivity != "目前無團"{
+                                            showingCalender.toggle()
+                                        }
+                                        
                                         
                                     }
                                 
                                 NavigationLink(destination: CalenderCV(activity: "\(selectedActivity)"), isActive: $showingCalender){
                                     
-                                }
+                                }.hidden()
                             }
                             
                             
