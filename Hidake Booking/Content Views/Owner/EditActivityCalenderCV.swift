@@ -33,7 +33,7 @@ struct EditActivityCalenderCV: View {
             
             TextFieldView(placeHolder: "日期...05-04", textValue:  $activityDateValue)
             TextFieldView(placeHolder: "團名...", textValue:  $activityNameValue)
-            TextFieldView(placeHolder: "成團人數...", textValue: $activitySeatValue)
+            TextFieldView(placeHolder: "剩餘人數...", textValue: $activitySeatValue)
             
             
             Button(action: {
@@ -45,16 +45,25 @@ struct EditActivityCalenderCV: View {
                 activity.category = activityName
                 print("EditActivityCalenderCV: pressed")
                 do {
+                    
+                    
+                    do {
+                         db.collection("\(activityName)DATE_LIST").document("DATE_LIST").updateData(["dates": FieldValue.arrayUnion(["\(activityDateValue)"])])
+                    }
                     try db.collection("\(activityName)\(activityDateValue)").document(activity.id).setData(from: activity)
                     
+                   
                     activityNameValue = ""
                     activityDateValue = ""
                     activitySeatValue = ""
-                   
+                    
                     
                 } catch let error {
                     print("Error writing city to Firestore: \(error)")
                 }
+                
+             
+                
                 
             }){
                 Text("新增")
@@ -67,13 +76,13 @@ struct EditActivityCalenderCV: View {
             .cornerRadius(10)
             .padding()
         }.navigationTitle("\(activityName)加團")
-       
+        
     }
 }
 
 /*
-struct EditActivityCalenderCV_Previews: PreviewProvider {
-    static var previews: some View {
-        EditActivityCalenderCV()
-    }
-}*/
+ struct EditActivityCalenderCV_Previews: PreviewProvider {
+ static var previews: some View {
+ EditActivityCalenderCV()
+ }
+ }*/

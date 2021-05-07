@@ -14,10 +14,10 @@ struct EditCategortView: View {
     var activities: [String]
     var activityIcon: String
     @State private var showingAddCalenderCV = false
-    @State private var showingAddActivityCV = false
+    //@State private var showingAddActivityCV = false
     @State var selectedActivity = ""
     
-
+    
     
     var body: some View {
         
@@ -25,6 +25,8 @@ struct EditCategortView: View {
         VStack{
             
             ZStack {
+                
+                
                 
                 Image("\(categoryImage)")
                     .resizable()
@@ -49,80 +51,69 @@ struct EditCategortView: View {
             
             VStack (alignment: .leading){
                 
-                
                 ForEach(activities, id: \.self){ activity in
                     
                     
-                    Button(action: {
+                    Text("\(activityIcon) \(activity)")
+                        .font(.title)
+                        .onTapGesture {
+                            
+                            selectedActivity = activity
                             print("CategoryView: \(activity) clicked")
-                            self.selectedActivity = activity
-                            self.showingAddCalenderCV = true}){
-                        Text("\(activityIcon) \(activity)")
-                            .font(.title)
+                            
+                            if selectedActivity != "目前無團" {
+                                showingAddCalenderCV = true
+                            }
+                            
+                            
+                        }
+                    
+                    if selectedActivity != "目前無團" {
+                        NavigationLink(destination: EditActivityCalenderCV(activityName: selectedActivity), isActive: $showingAddCalenderCV){
+                            EmptyView()
+                        }.hidden()
                     }
                     
                     
-                    
-                    
-                    /*Text("\(activityIcon) \(activity)")
-                        .font(.title)
-                        .onTapGesture {
-                            print("CategoryView: \(activity) clicked")
-                            selectedActivity = activity
-                            showingAddCalenderCV.toggle()
-                            
-                        }
-                    
-                    if selectedActivity != "目前無團" || selectedActivity == "" {
-                        NavigationLink(destination: EditActivityCalenderCV(activityName: selectedActivity), isActive: $showingAddCalenderCV){
-                            
-                        }
-                    }*/
                     
                     
                 }
                 
                 
             }.padding(.horizontal, 10)
-           
+            
             
             
             
         }
         /*
-        Button(action: {
-            addNewTour()
-            showingAddActivityCV.toggle()
-        }){
-            
-            HStack {
-                Image(systemName: "plus.circle")
-                Text("新增\(categoryName)地點...")
-                    .padding(.leading, 20)
-            }
-            
-        }
-
-        .padding(15)
+         Button(action: {
+         addNewTour()
+         showingAddActivityCV.toggle()
+         }){
+         
+         HStack {
+         Image(systemName: "plus.circle")
+         Text("新增\(categoryName)地點...")
+         .padding(.leading, 20)
+         }
+         
+         }
+         
+         .padding(15)
+         
+         
+         
+         NavigationLink(destination: AddActivityCV(category: categoryName), isActive: $showingAddActivityCV, label: {}) */
         
         
         
-        NavigationLink(destination: AddActivityCV(category: categoryName), isActive: $showingAddActivityCV, label: {}) */
         
         
+       /* NavigationLink(destination: EditActivityCalenderCV(), isActive: $showingAddCalenderCV, label: {})
+        */
         
         
-        
-        /*NavigationLink(destination: EditActivityCalenderCV(), isActive: $showingAddCalenderCV, label: {})*/
-        VStack {
-                            if selectedActivity != "" {
-                                
-                                NavigationLink(destination: EditActivityCalenderCV(activityName: selectedActivity), isActive: $showingAddCalenderCV){
-                                    EmptyView()
-                                }.hidden()
-                                
-                            }
-        }
         
     }
     
