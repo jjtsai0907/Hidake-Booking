@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-
+import Firebase
+import FirebaseFirestoreSwift
 
 struct CategoryView: View {
     
@@ -52,18 +53,24 @@ struct CategoryView: View {
                             
                             ForEach(activities, id: \.self){ activity in
                                 
-                                Text("\(activityIcon) \(activity)")
-                                    .font(.title)
-                                    .onTapGesture {
-                                        
-                                        selectedActivity = activity
-                                        print("CategoryView: \(activity) clicked")
-                                        if selectedActivity != "目前無團"{
-                                            showingCalender.toggle()
+                                HStack {
+                                    Text("\(activityIcon) \(activity)")
+                                        .font(.title)
+                                        .onTapGesture {
+                                            
+                                            selectedActivity = activity
+                                            print("CategoryView: \(activity) clicked")
+                                            if selectedActivity != "目前無團"{
+                                                showingCalender.toggle()
+                                            }
+                                            
+                                            
                                         }
-                                        
-                                        
-                                    }
+                                    
+                                    
+                                    
+                                }
+                                
                                 
                                 NavigationLink(destination: CalenderCV(activity: "\(selectedActivity)"), isActive: $showingCalender){
                                     
@@ -79,7 +86,11 @@ struct CategoryView: View {
             }
             
             
-        }.onTapGesture {
+        }.onAppear(){
+            
+            
+        }
+        .onTapGesture {
             clicked.toggle()
             print("CategoryView:  \(categoryName) pressed!")
         }

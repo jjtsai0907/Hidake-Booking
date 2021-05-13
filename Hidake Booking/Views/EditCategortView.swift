@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestoreSwift
 
 struct EditCategortView: View {
     
@@ -53,20 +55,27 @@ struct EditCategortView: View {
                 
                 ForEach(activities, id: \.self){ activity in
                     
-                    
-                    Text("\(activityIcon) \(activity)")
-                        .font(.title)
-                        .onTapGesture {
-                            
-                            selectedActivity = activity
-                            print("CategoryView: \(activity) clicked")
-                            
-                            if selectedActivity != "目前無團" {
-                                showingAddCalenderCV = true
+                    HStack {
+                        Text("\(activityIcon) \(activity)")
+                            .font(.title)
+                            .onTapGesture {
+                                
+                                selectedActivity = activity
+                                print("CategoryView: \(activity) clicked")
+                                
+                                if selectedActivity != "目前無團" {
+                                    showingAddCalenderCV = true
+                                }
+                                
+                                
                             }
-                            
-                            
-                        }
+                        
+                        
+                        
+                    }
+                    
+                    
+                    
                     
                     if selectedActivity != "目前無團" {
                         NavigationLink(destination: EditActivityCalenderCV(activityName: selectedActivity), isActive: $showingAddCalenderCV){
