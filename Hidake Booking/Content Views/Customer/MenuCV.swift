@@ -19,7 +19,7 @@ struct MenuCV: View {
     var draftingCategory = ["栗松溫泉"]
     
     var body: some View {
-        NavigationView {
+        
             List {
                 
                 CategoryView(categoryImage: "oneDay", categoryName: "新手登山", activities: oneDayCategory, activityIcon: "🧒🏻")
@@ -63,7 +63,7 @@ struct MenuCV: View {
             
             
             
-        }
+        
     }
 }
 

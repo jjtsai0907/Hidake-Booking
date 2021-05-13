@@ -23,15 +23,18 @@ struct EntryCV: View {
             
             VStack {
                 
-                Text(info.email)
+                //Text(info.email)
                 
-                Text(info.customerUID)
+                //Text(info.customerUID)
+                
                 
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 
-                Spacer()
+                //Spacer()
+                
+                /*
                 // Switch Between Buttons
                 HStack {
                     
@@ -107,6 +110,25 @@ struct EntryCV: View {
                 }
                 
                 Spacer()
+                */
+                
+                
+                NavigationLink(destination: TabCV(), label: {
+                    Text("我要預約登山")
+                        .padding(.horizontal, 40)
+                        .padding(.vertical, 8)
+                        .foregroundColor(.white)
+                        .font(Font.headline.weight(.bold))
+                    
+                }).background(Color("themeBlue"))
+                .shadow(radius: 25)
+                .cornerRadius(10)
+                .padding(.top, 30)
+                
+                
+                
+            
+                
                 
                 NavigationLink(destination: OwnerCV(), isActive: $showingOwnerCV, label: {
                     

@@ -26,8 +26,8 @@ struct Hidake_BookingApp: App {
         
         WindowGroup {
             //passing to man view
-            //EntryCV(info: self.delegate)
-            MenuCV()
+            EntryCV(info: self.delegate)
+            //MenuCV()
         }
 
     }

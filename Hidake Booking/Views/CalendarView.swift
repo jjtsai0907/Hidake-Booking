@@ -44,9 +44,16 @@ struct CalendarRepresentable: UIViewRepresentable {
         //calendar.allowsMultipleSelection = true
         
        
-        calendar.appearance.eventDefaultColor = .orange
+        calendar.appearance.eventDefaultColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         //calendar.appearance.eventOffset
         calendar.appearance.eventSelectionColor = .red
+        
+        //calendar.appearance.titleDefaultColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        
+        //calendar.appearance.titleFont = .boldSystemFont(ofSize: 20)
+        //calendar.appearance.titlePlaceholderColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        
+        
         
         
         return calendar
@@ -159,6 +166,7 @@ struct CalendarRepresentable: UIViewRepresentable {
             
            // NavigationLink
             
+            
             return true
         }
         
@@ -170,7 +178,7 @@ struct CalendarRepresentable: UIViewRepresentable {
             print("Cancel Date:  \(formatter.string(from: date))")
         }
         
-        
+       /*
         // show different colour of dates Not working at the moment
         func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDetaultColorFor date: Date) -> UIColor? {
             formatter.dateFormat = "MM-dd"
@@ -185,7 +193,7 @@ struct CalendarRepresentable: UIViewRepresentable {
             
         }
         
-        
+        */
         
         func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
             let eventScaleFactor: CGFloat = 2.8
