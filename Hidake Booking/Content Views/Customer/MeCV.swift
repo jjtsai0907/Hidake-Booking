@@ -12,7 +12,7 @@ struct MeCV: View {
     @State var showingSuggection = false
     @State var showingAbout = false
     @State var showingContact = false
-    
+    @State var showingPartner = false
     
     var body: some View {
         Form {
@@ -33,9 +33,14 @@ struct MeCV: View {
                         .onTapGesture {
                             showingContact = true
                         }.sheet(isPresented: $showingContact, content: {ContactSheet()})
-                
-                
+                    
+                Text("合作夥伴                ")
+                    .onTapGesture {
+                        showingPartner = true
+                    }.sheet(isPresented: $showingPartner, content: {PartnerSheet()})
                 }
+            
+            
                 
                
           

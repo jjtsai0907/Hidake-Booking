@@ -40,6 +40,7 @@
 		B98A2C6925FB449F002D1ACF /* DetailsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */; };
 		B999DDD5262C16BF003ACB4C /* PrivateBookingCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999DDD4262C16BF003ACB4C /* PrivateBookingCV.swift */; };
 		B999DDDA262C21DB003ACB4C /* AnnouncementImageViewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B999DDD9262C21DB003ACB4C /* AnnouncementImageViewPicker.swift */; };
+		B99CA7FF265A836F00561026 /* PartnerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CA7FE265A836F00561026 /* PartnerSheet.swift */; };
 		B9A55810260ACFA6007FDE19 /* EditAnnouncementCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5580F260ACFA6007FDE19 /* EditAnnouncementCV.swift */; };
 		B9A5581D260AD55B007FDE19 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5581C260AD55B007FDE19 /* Activity.swift */; };
 		B9A7A816260A21FD005F4D70 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7A815260A21FD005F4D70 /* Announcement.swift */; };
@@ -113,6 +114,7 @@
 		B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSheet.swift; sourceTree = "<group>"; };
 		B999DDD4262C16BF003ACB4C /* PrivateBookingCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateBookingCV.swift; sourceTree = "<group>"; };
 		B999DDD9262C21DB003ACB4C /* AnnouncementImageViewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementImageViewPicker.swift; sourceTree = "<group>"; };
+		B99CA7FE265A836F00561026 /* PartnerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerSheet.swift; sourceTree = "<group>"; };
 		B9A5580F260ACFA6007FDE19 /* EditAnnouncementCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAnnouncementCV.swift; sourceTree = "<group>"; };
 		B9A5581C260AD55B007FDE19 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B9A7A815260A21FD005F4D70 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				B901EC2D25FE3558009E28CC /* EditCategortView.swift */,
 				B958BDAB26048A0300A460DB /* CalendarView.swift */,
 				B972318E260494C0003C4E11 /* Test.swift */,
+				B99CA7FE265A836F00561026 /* PartnerSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			files = (
 				B967649325FD028700DFE368 /* TabEditCV.swift in Sources */,
 				B901EC3625FE429C009E28CC /* AddActivityCV.swift in Sources */,
+				B99CA7FF265A836F00561026 /* PartnerSheet.swift in Sources */,
 				B999DDD5262C16BF003ACB4C /* PrivateBookingCV.swift in Sources */,
 				B901BC2F262DB88C00033AE6 /* ContactInfoRow.swift in Sources */,
 				B9227AC92609BC8000982C66 /* GetDatas.swift in Sources */,

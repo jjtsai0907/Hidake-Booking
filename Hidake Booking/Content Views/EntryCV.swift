@@ -127,9 +127,6 @@ struct EntryCV: View {
                 
                 
                 
-            
-                
-                
                 NavigationLink(destination: OwnerCV(), isActive: $showingOwnerCV, label: {
                     
                 })
