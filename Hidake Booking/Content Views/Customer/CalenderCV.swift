@@ -88,7 +88,7 @@ struct CalenderCV: View {
                 .cornerRadius(10)
                 .padding(.leading, 30)
                 .sheet(isPresented: $showingDetails, content: {
-                    DetailsSheet()
+                    DetailsSheet(activity: activity)
                 })
                 
                 Spacer()

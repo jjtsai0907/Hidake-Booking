@@ -19,6 +19,7 @@ struct EditActivityCalenderCV: View {
     @State private var activityNameValue = ""
     @State private var activitySeatValue = ""
     
+    @State private var editingSchedule = false
     
     
     var dateFormatter: DateFormatter {
@@ -75,6 +76,15 @@ struct EditActivityCalenderCV: View {
             .shadow(radius: 25)
             .cornerRadius(10)
             .padding()
+            
+            
+            
+            Spacer()
+            
+            NavigationLink(destination: EditScheduleCV(activity: activityName), isActive: $editingSchedule, label: {
+                Text("編輯行程內容")
+            })
+            
         }.navigationTitle("\(activityName)加團")
         
     }

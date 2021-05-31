@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestoreSwift
 
 struct DetailsSheet: View {
     
@@ -15,10 +17,28 @@ struct DetailsSheet: View {
     @State var showingInfo = false
     @State var showingGeers = false
     
+    @State private var scheduleTitle = ""
+    @State private var imageURL = ""
+    @State private var scheduleDetails = ""
+    @State private var includedCost = ""
+    @State private var extraCost = ""
+    @State private var geers = ""
+    @State private var info = ""
+    
+    
+    
+    
+    var activity: String
+    
+    
+    
     var body: some View {
         
         VStack {
-            Image("camping")
+            
+            Text("專屬\(activity)")
+                .font(.title)
+            Image(uiImage: imageURL.load())
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
@@ -28,7 +48,6 @@ struct DetailsSheet: View {
             Spacer()
             
             Form {
-                
                 Section {
                     VStack {
                         Button(action: {
@@ -46,38 +65,7 @@ struct DetailsSheet: View {
                         
                         if showingTour {
                             withAnimation{
-                                Text("""
-                                            第一天
-                                            
-                                            07:00 台中高鐵集合
-                                            09:30 屯原登山口
-                                            11:30 雲海保線所 (中餐自理)
-                                            14:00 能高越嶺古道8.8K
-                                            17:30 天池山莊/晚餐 宿山莊/營地
-
-                                            -
-                                            第二天
-
-                                            04:00 - 05:00 天池山莊（早餐、整裝出發）
-                                            06:00 能高天池
-                                            07:00 奇萊南峰
-                                            08:00 能高天池
-                                            09:30 南華山
-                                            11:00 天池山莊（休息、午餐自理）
-                                            12:30 光被八表
-                                            14:30 天池山莊
-                                            17:30 晚餐 宿山莊/營地
-
-                                            -
-                                            第三天
-
-                                            06:00 - 06:30 天池山莊（早餐、整裝出發）
-                                            09:30 雲海保線所
-                                            11:30 屯原登山口
-                                            12:00 下山盥洗
-                                            13:30 慶功宴
-                                            16:30 台中高鐵
-                                            """)
+                                Text(scheduleDetails)
                             }
                         }
                         
@@ -99,16 +87,7 @@ struct DetailsSheet: View {
                         
                         
                         if showingIncludedCost {
-                            Text("""
-✔台中高鐵 屯原登山口來回接駁(送下山盥洗)
-✔入山入園代辦行政費用
-✔天池山莊兩晚床位/營地費用
-✔天池山莊伙食睡袋二晚 二早 一點心
-✔專業高山嚮導
-✔三日登山險(投保200萬意外險+20萬醫療險)
-✔下山慶功宴
-
-""")
+                            Text(includedCost)
                         }
                         
                     }
@@ -129,7 +108,7 @@ struct DetailsSheet: View {
                         }.padding(.vertical, 10)
                    
                         if showingExtraCosts {
-                            Text("三日午餐")
+                            Text(extraCost)
                             
                         }
                         
@@ -151,7 +130,7 @@ struct DetailsSheet: View {
                         }.padding(.vertical, 10)
                    
                         if showingGeers {
-                            Text("")
+                            Text(geers)
                             
                         }
                         
@@ -173,7 +152,7 @@ struct DetailsSheet: View {
                         }.padding(.vertical, 10)
                    
                         if showingInfo {
-                            Text("三日午餐")
+                            Text(info)
                             
                         }
                         
@@ -182,14 +161,63 @@ struct DetailsSheet: View {
                 
             }
             
+        }.onAppear(){
+            print("Detailsssss")
+            
+            let db = Firestore.firestore()
+            db.collection("\(activity)SCHEDULE").document("schedule").getDocument { (snap, err) in
+                if err != nil {
+                    print("GetData DetailSheet, info collection error: \(String(describing: err))")
+                    return
+                } else {
+                    
+                    
+                    if snap != nil {
+                        
+                           let result = Result {
+                            try snap!.data(as: Schedule.self)
+                            }
+                            
+                            switch result {
+                            case .success(let schedule):
+                                if let schedule = schedule {
+                                    imageURL = schedule.imageURL
+                                    scheduleTitle = schedule.scheduleTitle
+                                    scheduleDetails = schedule.scheduleDetails
+                                    includedCost = schedule.includedCost
+                                    extraCost = schedule.extraCost
+                                    geers = schedule.geers
+                                    info = schedule.info
+                                    
+                                    print("DetailSheet, getting data from Firebase : \(schedule.includedCost)")
+                                    
+                                } else {
+                                    print("DetailSheet, getting data from Firebase : No data")
+                                }
+                            case .failure(let error):
+                                print("DetailSheet, getting data from Firebase, Error: \(error)")
+                            }
+                            
+                            
+                            
+                        
+                    }
+                    
+                }
+            }
+            
+            
         }
+    
         
         
     }
 }
 
-struct DetailsCV_Previews: PreviewProvider {
+/*
+ struct DetailsCV_Previews: PreviewProvider {
     static var previews: some View {
         DetailsSheet()
     }
 }
+*/
