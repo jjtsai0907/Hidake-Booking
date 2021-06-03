@@ -33,6 +33,22 @@ struct BookingCV: View {
             
             Webview(url:"https://docs.google.com/forms/d/e/1FAIpQLSdr8cyUemMjaHeXFHIEQ7FF0tCgkK6uRqTSrmsxXl46xo9LHg/viewform?usp=pp_url&entry.2068587343=%E6%98%AF,+%E6%88%91%E5%90%8C%E6%84%8F%E3%80%82")
         }
+     else if bookingCategory == "北部" {
+        
+        Webview(url:"https://docs.google.com/forms/d/e/1FAIpQLSfLv-AiNxAbJRMb8fH7UdxzxmLbsNiyQouNgYqJR8c8xHqUFw/viewform?usp=pp_url&entry.1223179306=%E9%81%B8%E9%A0%85+1")
+    }
+     else if bookingCategory == "中部" {
+        
+        Webview(url:"https://docs.google.com/forms/d/e/1FAIpQLSe3LUjKVeW_sVzYYmyRIF-SS7BMqqoxuiB42a-G8OQqeFCPbw/viewform?usp=pp_url&entry.452315444=05/17+-+05/18%EF%BC%88%E6%88%90%E5%9C%98%E5%8F%AF%E5%A0%B1%E5%90%8D%EF%BC%89")
+    }
+     else if bookingCategory == "南部" {
+        
+        Webview(url:"https://docs.google.com/forms/d/e/1FAIpQLSc-PeFcjKfRz1g0h3ecpoVJn-EKTY1uu8G05--rU3ZJgR2G-w/viewform?usp=pp_url&entry.1223179306=%E9%81%B8%E9%A0%85+1")
+    }
+     else if bookingCategory == "東部" {
+        
+        Webview(url:"https://docs.google.com/forms/d/e/1FAIpQLSd30MWpcarVE2itnXwewOVfyexhrr0Rfy3K9t2ZsxrDR5Sw8Q/viewform?usp=pp_url&entry.1558471817=%E5%90%A6(%E8%91%B7%E9%A3%9F)")
+    }
         
         
         
@@ -54,4 +70,6 @@ struct BookingCV_Previews: PreviewProvider {
         BookingCV()
     }
 }
+ 
+ 
 */

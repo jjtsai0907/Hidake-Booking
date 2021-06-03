@@ -199,6 +199,7 @@
 				B98A2C6825FB449F002D1ACF /* DetailsSheet.swift */,
 				B9221EB925F84C91000FF3BB /* TextFieldView.swift */,
 				B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */,
+				B944A48E2664B12B00842302 /* Row.swift */,
 				B901EC2425FE174A009E28CC /* EditDetailsSheet.swift */,
 				B901EC2D25FE3558009E28CC /* EditCategortView.swift */,
 				B958BDAB26048A0300A460DB /* CalendarView.swift */,
@@ -219,7 +220,6 @@
 				B901BC29262DB56000033AE6 /* ContactSheet.swift */,
 				B901BC2E262DB88C00033AE6 /* ContactInfoRow.swift */,
 				B916735E2663212E00B1BB0F /* Schedule.swift */,
-				B944A48E2664B12B00842302 /* Row.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

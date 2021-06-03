@@ -9,9 +9,19 @@ import SwiftUI
 
 struct PartnerSheet: View {
     var body: some View {
-        Image("food")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        VStack {
+            
+            HStack {
+                Image("food")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Spacer()
+            }
+            
+            Spacer()
+        }
+        
+       
     }
 }
 

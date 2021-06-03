@@ -41,6 +41,7 @@ extension String {
 
 struct EditAnnouncementCV: View {
     @State var announcementValue = ""
+    @State var websiteLink = ""
     let db = Firestore.firestore()
     @State var showImagePicker = false
     @State var imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
@@ -64,6 +65,9 @@ struct EditAnnouncementCV: View {
             
             TextFieldView(placeHolder: "輸入公告內容: ", textValue: $announcementValue)
                 .padding(.bottom, 20)
+            
+            TextFieldView(placeHolder: "輸入活動網址: ", textValue: $websiteLink)
+                .padding(.bottom, 20)
                 
             
             
@@ -73,11 +77,12 @@ struct EditAnnouncementCV: View {
                     
                     announcement.info = announcementValue
                     announcement.imageURL = downloadedImageURL
-                    
+                    announcement.website = websiteLink
                     
                     do {
                         try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
                         announcementValue = ""
+                        websiteLink = ""
                         imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
                         print("EditAnnouncementCV: uploaded the announcement!")
                         

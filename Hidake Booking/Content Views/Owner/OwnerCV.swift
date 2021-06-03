@@ -17,7 +17,7 @@ struct OwnerCV: View {
     @State private var ownerPasswordValue = ""
     @State private var ownerLoggedIn = false
     
-    
+    @State private var showingAlert = false
     
     
     var body: some View {
@@ -25,13 +25,21 @@ struct OwnerCV: View {
         
         
         VStack{
-            TextFieldView(placeHolder: "Google 信箱: ", textValue: $ownerEmailValue)
-            TextFieldView(placeHolder: "Google 密碼: ", textValue: $ownerPasswordValue)
+            TextFieldView(placeHolder: "信箱: ", textValue: $ownerEmailValue)
+            TextFieldView(placeHolder: "密碼: ", textValue: $ownerPasswordValue)
             
            
             
             Button(action: {
-                ownerLoggedIn = true
+                
+                if ownerEmailValue == "HHiiDDaakk2!0" && ownerPasswordValue == "HHiiDDaakk7!3" {
+                    ownerLoggedIn = true
+                } else {
+                    showingAlert = true
+                }
+                
+                
+                //ownerLoggedIn = true
                /* Auth.auth().signIn(withEmail: ownerEmailValue, password: ownerPasswordValue) { authResult, error in
                     if let e = error {
                         print(e)
@@ -62,7 +70,9 @@ struct OwnerCV: View {
             .shadow(radius: 25)
             .cornerRadius(10)
             .padding(.top, 30)
-            
+            .alert(isPresented: $showingAlert) {
+                        Alert(title: Text("BACK OFF"), message: Text("我知道你不是管理員！"), dismissButton: .default(Text("離開!")))
+                    }
             
             NavigationLink(destination: TabEditCV(), isActive: $ownerLoggedIn, label: {
                 Text("")

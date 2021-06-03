@@ -14,7 +14,7 @@ struct ContactInfoRow: View {
     
     var body: some View {
         HStack{
-            Image(infoLogo)
+            Text(infoLogo)
             Text(infoContent)
         }
     }

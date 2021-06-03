@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 
+
 struct EntryCV: View {
     
     @ObservedObject var info : AppDelegate
@@ -16,6 +17,8 @@ struct EntryCV: View {
     
     @State private var index = 0
     @State private var showingOwnerCV = false
+    
+  
     
     var body: some View {
         
@@ -114,7 +117,7 @@ struct EntryCV: View {
                 
                 
                 NavigationLink(destination: TabCV(), label: {
-                    Text("我要預約登山")
+                    Text("我要預約行程")
                         .padding(.horizontal, 40)
                         .padding(.vertical, 8)
                         .foregroundColor(.white)
@@ -138,7 +141,12 @@ struct EntryCV: View {
             }.padding(.top, 20)
             .navigationTitle("")
             .navigationBarItems(trailing: Button(action: {
-                showingOwnerCV = true
+                
+                
+                
+                    showingOwnerCV = true
+               
+                
             }){
                 Text("管理員")
             })

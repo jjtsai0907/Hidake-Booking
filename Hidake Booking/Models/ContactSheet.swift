@@ -13,11 +13,13 @@ struct ContactSheet: View {
             Image("logo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            ContactInfoRow(infoLogo: "👹", infoContent: "534rskov")
-            ContactInfoRow(infoLogo: "👹", infoContent: "hidake_taiwan")
-            ContactInfoRow(infoLogo: "👹", infoContent: "需要合作請直接連絡")
-            ContactInfoRow(infoLogo: "👹", infoContent: "創辦人:Leonardo")
-            ContactInfoRow(infoLogo: "👹", infoContent: "wkin0535")
+            ContactInfoRow(infoLogo: "☀️", infoContent: "Line: 534rskov")
+            //ContactInfoRow(infoLogo: "☀️", infoContent: "Line: 534rskov")
+            ContactInfoRow(infoLogo: "☀️", infoContent: "IG: hidake_taiwan")
+                .padding(.bottom,20)
+            ContactInfoRow(infoLogo: "", infoContent: "需要合作請直接連絡")
+            ContactInfoRow(infoLogo: "🦁", infoContent: "創辦人:Leonardo")
+            ContactInfoRow(infoLogo: "🔥", infoContent: "Line: wkin0535")
         }
         
     }

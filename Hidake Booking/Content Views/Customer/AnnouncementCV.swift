@@ -22,6 +22,7 @@ struct AnnouncementCV: View {
         
         
         List (announcements.announcementList) { announcement in
+            
             VStack {
                 //truckProfileDatas.datas.logoUrl.load()
                 Image(uiImage: announcement.imageURL.load())
@@ -37,9 +38,24 @@ struct AnnouncementCV: View {
                 }.padding()
                 
                     
-                
-                
-                
+                HStack {
+                    if announcement.website != "" {
+                        Spacer()
+                        
+                        NavigationLink(destination: Webview(url: announcement.website), label: {
+                            Text("前往活動 >>")
+                                .bold()
+                                .font(.title3)
+                                .foregroundColor(.blue)
+                        })
+                        
+                        
+                        
+                    }
+                    
+                }.padding(.leading)
+                .padding(.bottom)
+              
             }.padding(.bottom, 20)
             
             

@@ -32,9 +32,7 @@ struct LoginCV: View {
             
             Button(action: {
                 
-                GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
                 
-                GIDSignIn.sharedInstance()?.signIn()
                 
                 
                 

@@ -36,8 +36,7 @@ struct DetailsSheet: View {
         
         VStack {
             
-            Text("專屬\(activity)")
-                .font(.title)
+           
             Image(uiImage: imageURL.load())
                 .resizable()
                 .aspectRatio(contentMode: .fit)

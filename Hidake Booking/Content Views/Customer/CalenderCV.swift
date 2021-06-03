@@ -43,8 +43,8 @@ struct CalenderCV: View {
             
             if showCalender {
                 CalendarRepresentable(datesWithActivity: $qq, category: $category, selectedDateActivities: $selectedDateActivities, selectedDate: $selectedDate, dateString: $dateString)
-                    .padding()
-                    .frame(height: 400)
+                    .padding(20)
+                    //.frame(height: 400)
             }
             
       
