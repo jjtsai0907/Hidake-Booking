@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15CFC5FD18F70ACE09542CA9 /* Pods_Hidake_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */; };
 		B901BC2A262DB56000033AE6 /* ContactSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901BC29262DB56000033AE6 /* ContactSheet.swift */; };
 		B901BC2F262DB88C00033AE6 /* ContactInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901BC2E262DB88C00033AE6 /* ContactInfoRow.swift */; };
 		B901EC2025FE161F009E28CC /* EditMenuCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901EC1F25FE161F009E28CC /* EditMenuCV.swift */; };
@@ -19,7 +18,6 @@
 		B9221EBA25F84C91000FF3BB /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EB925F84C91000FF3BB /* TextFieldView.swift */; };
 		B9221EC225F86334000FF3BB /* RegisterCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9221EC125F86334000FF3BB /* RegisterCV.swift */; };
 		B9227AC92609BC8000982C66 /* GetDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9227AC82609BC8000982C66 /* GetDatas.swift */; };
-		B935BCB92623351200DB68F1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B935BCB82623351200DB68F1 /* HealthKit.framework */; };
 		B9444AF725F8407E00EF50B6 /* Hidake_BookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444AF625F8407E00EF50B6 /* Hidake_BookingApp.swift */; };
 		B9444AF925F8407E00EF50B6 /* EntryCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444AF825F8407E00EF50B6 /* EntryCV.swift */; };
 		B9444AFB25F8408000EF50B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9444AFA25F8408000EF50B6 /* Assets.xcassets */; };
@@ -35,6 +33,8 @@
 		B965B83A25FCF143004928EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B965B83925FCF143004928EB /* GoogleService-Info.plist */; };
 		B967648E25FCFFE600DFE368 /* OwnerCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967648D25FCFFE600DFE368 /* OwnerCV.swift */; };
 		B967649325FD028700DFE368 /* TabEditCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967649225FD028700DFE368 /* TabEditCV.swift */; };
+		B96D3AA3268211710011A585 /* Pods_Hidake_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */; };
+		B96D3AA6268211740011A585 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B935BCB82623351200DB68F1 /* HealthKit.framework */; };
 		B972318F260494C0003C4E11 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972318E260494C0003C4E11 /* Test.swift */; };
 		B98A2C5725F997EF002D1ACF /* MenuCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5625F997EF002D1ACF /* MenuCV.swift */; };
 		B98A2C5C25FA1B33002D1ACF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A2C5B25FA1B33002D1ACF /* CategoryView.swift */; };
@@ -48,6 +48,14 @@
 		B9A7A816260A21FD005F4D70 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7A815260A21FD005F4D70 /* Announcement.swift */; };
 		B9A91C78261FF317006198D9 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A91C77261FF317006198D9 /* Webview.swift */; };
 		B9A91C7D261FF6AB006198D9 /* BookingCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A91C7C261FF6AB006198D9 /* BookingCV.swift */; };
+		B9B3F7AD26710E7A004765DC /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3F7AC26710E7A004765DC /* Tests_iOS.swift */; };
+		B9B3F7B826710E7A004765DC /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3F7B726710E7A004765DC /* Tests_macOS.swift */; };
+		B9B3F7BA26710E7A004765DC /* hidakeBookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3F79226710E75004765DC /* hidakeBookingApp.swift */; };
+		B9B3F7BB26710E7A004765DC /* hidakeBookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3F79226710E75004765DC /* hidakeBookingApp.swift */; };
+		B9B3F7BC26710E7A004765DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3F79326710E75004765DC /* ContentView.swift */; };
+		B9B3F7BD26710E7A004765DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3F79326710E75004765DC /* ContentView.swift */; };
+		B9B3F7BE26710E7A004765DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B3F79426710E7A004765DC /* Assets.xcassets */; };
+		B9B3F7BF26710E7A004765DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B3F79426710E7A004765DC /* Assets.xcassets */; };
 		B9FBA22F25FF1F01000CF548 /* EditActivityCalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FBA22E25FF1F01000CF548 /* EditActivityCalenderCV.swift */; };
 		D451F4C69EBCE8E41F6A7B23 /* Pods_Hidake_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E13ED8BFE2FCD601EC3109 /* Pods_Hidake_BookingTests.framework */; };
 		EE0C72652ABD8D27890C066F /* Pods_Hidake_Booking_Hidake_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07892C004B2D6796709A179 /* Pods_Hidake_Booking_Hidake_BookingUITests.framework */; };
@@ -67,6 +75,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = B9444AF225F8407E00EF50B6;
 			remoteInfo = "Hidake Booking";
+		};
+		B9B3F7A926710E7A004765DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9444AEB25F8407E00EF50B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9B3F79826710E7A004765DC;
+			remoteInfo = "hidakeBooking (iOS)";
+		};
+		B9B3F7B426710E7A004765DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9444AEB25F8407E00EF50B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9B3F79F26710E7A004765DC;
+			remoteInfo = "hidakeBooking (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -124,6 +146,20 @@
 		B9A7A815260A21FD005F4D70 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		B9A91C77261FF317006198D9 /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
 		B9A91C7C261FF6AB006198D9 /* BookingCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCV.swift; sourceTree = "<group>"; };
+		B9B3F79226710E75004765DC /* hidakeBookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hidakeBookingApp.swift; sourceTree = "<group>"; };
+		B9B3F79326710E75004765DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9B3F79426710E7A004765DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9B3F79926710E7A004765DC /* hidakeBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hidakeBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B3F79B26710E7A004765DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B3F7A026710E7A004765DC /* hidakeBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hidakeBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B3F7A226710E7A004765DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B3F7A326710E7A004765DC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		B9B3F7A826710E7A004765DC /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B3F7AC26710E7A004765DC /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		B9B3F7AE26710E7A004765DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B3F7B326710E7A004765DC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B3F7B726710E7A004765DC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		B9B3F7B926710E7A004765DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9FBA22E25FF1F01000CF548 /* EditActivityCalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditActivityCalenderCV.swift; sourceTree = "<group>"; };
 		D60FFF4CAD78223A4377BD47 /* Pods-Hidake BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake BookingTests.debug.xcconfig"; path = "Target Support Files/Pods-Hidake BookingTests/Pods-Hidake BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9605DBC12DF80260C744073 /* Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; path = "Target Support Files/Pods-Hidake Booking-Hidake BookingUITests/Pods-Hidake Booking-Hidake BookingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,9 +170,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B935BCB92623351200DB68F1 /* HealthKit.framework in Frameworks */,
+				B96D3AA6268211740011A585 /* HealthKit.framework in Frameworks */,
+				B96D3AA3268211710011A585 /* Pods_Hidake_Booking.framework in Frameworks */,
 				B965B82025FB85C1004928EB /* FSCalendar in Frameworks */,
-				15CFC5FD18F70ACE09542CA9 /* Pods_Hidake_Booking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +189,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0C72652ABD8D27890C066F /* Pods_Hidake_Booking_Hidake_BookingUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F79626710E7A004765DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F79D26710E7A004765DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F7A526710E7A004765DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F7B026710E7A004765DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +294,11 @@
 				B9444AF525F8407E00EF50B6 /* Hidake Booking */,
 				B9444B0725F8408100EF50B6 /* Hidake BookingTests */,
 				B9444B1225F8408100EF50B6 /* Hidake BookingUITests */,
+				B9B3F79126710E75004765DC /* Shared */,
+				B9B3F79A26710E7A004765DC /* iOS */,
+				B9B3F7A126710E7A004765DC /* macOS */,
+				B9B3F7AB26710E7A004765DC /* Tests iOS */,
+				B9B3F7B626710E7A004765DC /* Tests macOS */,
 				B9444AF425F8407E00EF50B6 /* Products */,
 				0C5264DFCFA137E8C30B23A5 /* Pods */,
 				B4962A18ED476BBAA01AD017 /* Frameworks */,
@@ -242,6 +311,10 @@
 				B9444AF325F8407E00EF50B6 /* Hidake Booking.app */,
 				B9444B0425F8408100EF50B6 /* Hidake BookingTests.xctest */,
 				B9444B0F25F8408100EF50B6 /* Hidake BookingUITests.xctest */,
+				B9B3F79926710E7A004765DC /* hidakeBooking.app */,
+				B9B3F7A026710E7A004765DC /* hidakeBooking.app */,
+				B9B3F7A826710E7A004765DC /* Tests iOS.xctest */,
+				B9B3F7B326710E7A004765DC /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +359,51 @@
 				B9444B1525F8408100EF50B6 /* Info.plist */,
 			);
 			path = "Hidake BookingUITests";
+			sourceTree = "<group>";
+		};
+		B9B3F79126710E75004765DC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B9B3F79226710E75004765DC /* hidakeBookingApp.swift */,
+				B9B3F79326710E75004765DC /* ContentView.swift */,
+				B9B3F79426710E7A004765DC /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B9B3F79A26710E7A004765DC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B9B3F79B26710E7A004765DC /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		B9B3F7A126710E7A004765DC /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B9B3F7A226710E7A004765DC /* Info.plist */,
+				B9B3F7A326710E7A004765DC /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		B9B3F7AB26710E7A004765DC /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B9B3F7AC26710E7A004765DC /* Tests_iOS.swift */,
+				B9B3F7AE26710E7A004765DC /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		B9B3F7B626710E7A004765DC /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B9B3F7B726710E7A004765DC /* Tests_macOS.swift */,
+				B9B3F7B926710E7A004765DC /* Info.plist */,
+			);
+			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		B9FBA23325FF213B000CF548 /* Owner */ = {
@@ -383,13 +501,83 @@
 			productReference = B9444B0F25F8408100EF50B6 /* Hidake BookingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B9B3F79826710E7A004765DC /* hidakeBooking (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B3F7C026710E7A004765DC /* Build configuration list for PBXNativeTarget "hidakeBooking (iOS)" */;
+			buildPhases = (
+				B9B3F79526710E7A004765DC /* Sources */,
+				B9B3F79626710E7A004765DC /* Frameworks */,
+				B9B3F79726710E7A004765DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hidakeBooking (iOS)";
+			productName = "hidakeBooking (iOS)";
+			productReference = B9B3F79926710E7A004765DC /* hidakeBooking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9B3F79F26710E7A004765DC /* hidakeBooking (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B3F7C326710E7A004765DC /* Build configuration list for PBXNativeTarget "hidakeBooking (macOS)" */;
+			buildPhases = (
+				B9B3F79C26710E7A004765DC /* Sources */,
+				B9B3F79D26710E7A004765DC /* Frameworks */,
+				B9B3F79E26710E7A004765DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hidakeBooking (macOS)";
+			productName = "hidakeBooking (macOS)";
+			productReference = B9B3F7A026710E7A004765DC /* hidakeBooking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9B3F7A726710E7A004765DC /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B3F7C626710E7A004765DC /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				B9B3F7A426710E7A004765DC /* Sources */,
+				B9B3F7A526710E7A004765DC /* Frameworks */,
+				B9B3F7A626710E7A004765DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9B3F7AA26710E7A004765DC /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = B9B3F7A826710E7A004765DC /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B9B3F7B226710E7A004765DC /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B3F7C926710E7A004765DC /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				B9B3F7AF26710E7A004765DC /* Sources */,
+				B9B3F7B026710E7A004765DC /* Frameworks */,
+				B9B3F7B126710E7A004765DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9B3F7B526710E7A004765DC /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = B9B3F7B326710E7A004765DC /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B9444AEB25F8407E00EF50B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					B9444AF225F8407E00EF50B6 = {
@@ -402,6 +590,20 @@
 					B9444B0E25F8408100EF50B6 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = B9444AF225F8407E00EF50B6;
+					};
+					B9B3F79826710E7A004765DC = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					B9B3F79F26710E7A004765DC = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					B9B3F7A726710E7A004765DC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = B9B3F79826710E7A004765DC;
+					};
+					B9B3F7B226710E7A004765DC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = B9B3F79F26710E7A004765DC;
 					};
 				};
 			};
@@ -424,6 +626,10 @@
 				B9444AF225F8407E00EF50B6 /* Hidake Booking */,
 				B9444B0325F8408100EF50B6 /* Hidake BookingTests */,
 				B9444B0E25F8408100EF50B6 /* Hidake BookingUITests */,
+				B9B3F79826710E7A004765DC /* hidakeBooking (iOS) */,
+				B9B3F79F26710E7A004765DC /* hidakeBooking (macOS) */,
+				B9B3F7A726710E7A004765DC /* Tests iOS */,
+				B9B3F7B226710E7A004765DC /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -447,6 +653,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B9444B0D25F8408100EF50B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F79726710E7A004765DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B3F7BE26710E7A004765DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F79E26710E7A004765DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B3F7BF26710E7A004765DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F7A626710E7A004765DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F7B126710E7A004765DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -650,6 +886,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9B3F79526710E7A004765DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B3F7BC26710E7A004765DC /* ContentView.swift in Sources */,
+				B9B3F7BA26710E7A004765DC /* hidakeBookingApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F79C26710E7A004765DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B3F7BD26710E7A004765DC /* ContentView.swift in Sources */,
+				B9B3F7BB26710E7A004765DC /* hidakeBookingApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F7A426710E7A004765DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B3F7AD26710E7A004765DC /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B3F7AF26710E7A004765DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B3F7B826710E7A004765DC /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -662,6 +932,16 @@
 			isa = PBXTargetDependency;
 			target = B9444AF225F8407E00EF50B6 /* Hidake Booking */;
 			targetProxy = B9444B1025F8408100EF50B6 /* PBXContainerItemProxy */;
+		};
+		B9B3F7AA26710E7A004765DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9B3F79826710E7A004765DC /* hidakeBooking (iOS) */;
+			targetProxy = B9B3F7A926710E7A004765DC /* PBXContainerItemProxy */;
+		};
+		B9B3F7B526710E7A004765DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9B3F79F26710E7A004765DC /* hidakeBooking (macOS) */;
+			targetProxy = B9B3F7B426710E7A004765DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -717,7 +997,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -772,7 +1052,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -791,15 +1071,16 @@
 				CODE_SIGN_ENTITLEMENTS = "Hidake Booking/Hidake Booking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hidake Booking/Preview Content\"";
-				DEVELOPMENT_TEAM = C29T459B7W;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Hidake Booking/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JJTsai0907.Hidake-Booking";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsai.hidakeBooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -815,15 +1096,16 @@
 				CODE_SIGN_ENTITLEMENTS = "Hidake Booking/Hidake Booking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hidake Booking/Preview Content\"";
-				DEVELOPMENT_TEAM = C29T459B7W;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Hidake Booking/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JJTsai0907.Hidake-Booking";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsai.hidakeBooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -837,8 +1119,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
 				INFOPLIST_FILE = "Hidake BookingTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -859,8 +1142,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
 				INFOPLIST_FILE = "Hidake BookingTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -880,6 +1164,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
 				INFOPLIST_FILE = "Hidake BookingUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -900,6 +1185,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
 				INFOPLIST_FILE = "Hidake BookingUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -911,6 +1197,185 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Hidake Booking";
+			};
+			name = Release;
+		};
+		B9B3F7C126710E7A004765DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsai.hidakeBooking;
+				PRODUCT_NAME = hidakeBooking;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9B3F7C226710E7A004765DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsai.hidakeBooking;
+				PRODUCT_NAME = hidakeBooking;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9B3F7C426710E7A004765DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsai.hidakeBooking;
+				PRODUCT_NAME = hidakeBooking;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B9B3F7C526710E7A004765DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsai.hidakeBooking;
+				PRODUCT_NAME = hidakeBooking;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B9B3F7C726710E7A004765DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsai.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "hidakeBooking (iOS)";
+			};
+			name = Debug;
+		};
+		B9B3F7C826710E7A004765DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsai.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "hidakeBooking (iOS)";
+			};
+			name = Release;
+		};
+		B9B3F7CA26710E7A004765DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsai.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "hidakeBooking (macOS)";
+			};
+			name = Debug;
+		};
+		B9B3F7CB26710E7A004765DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZDU99QW27G;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tsai.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "hidakeBooking (macOS)";
 			};
 			name = Release;
 		};
@@ -949,6 +1414,42 @@
 			buildConfigurations = (
 				B9444B1F25F8408100EF50B6 /* Debug */,
 				B9444B2025F8408100EF50B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B3F7C026710E7A004765DC /* Build configuration list for PBXNativeTarget "hidakeBooking (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B3F7C126710E7A004765DC /* Debug */,
+				B9B3F7C226710E7A004765DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B3F7C326710E7A004765DC /* Build configuration list for PBXNativeTarget "hidakeBooking (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B3F7C426710E7A004765DC /* Debug */,
+				B9B3F7C526710E7A004765DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B3F7C626710E7A004765DC /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B3F7C726710E7A004765DC /* Debug */,
+				B9B3F7C826710E7A004765DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B3F7C926710E7A004765DC /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B3F7CA26710E7A004765DC /* Debug */,
+				B9B3F7CB26710E7A004765DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

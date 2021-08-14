@@ -18,13 +18,12 @@ struct DetailsSheet: View {
     @State var showingGeers = false
     
     @State private var scheduleTitle = ""
-    @State private var imageURL = ""
+    //@State private var imageURL = ""
     @State private var scheduleDetails = ""
     @State private var includedCost = ""
     @State private var extraCost = ""
     @State private var geers = ""
     @State private var info = ""
-    
     
     
     
@@ -37,14 +36,14 @@ struct DetailsSheet: View {
         VStack {
             
            
-            Image(uiImage: imageURL.load())
+            /*Image(uiImage: imageURL.load())
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
                 .padding(20)
-                .padding(.top, 10)
+                .padding(.top, 10)*/
             
-            Spacer()
+            //Spacer()
             
             Form {
                 Section {
@@ -64,7 +63,9 @@ struct DetailsSheet: View {
                         
                         if showingTour {
                             withAnimation{
+                                
                                 Text(scheduleDetails)
+                                
                             }
                         }
                         
@@ -180,7 +181,7 @@ struct DetailsSheet: View {
                             switch result {
                             case .success(let schedule):
                                 if let schedule = schedule {
-                                    imageURL = schedule.imageURL
+                                    //imageURL = schedule.imageURL
                                     scheduleTitle = schedule.scheduleTitle
                                     scheduleDetails = schedule.scheduleDetails
                                     includedCost = schedule.includedCost

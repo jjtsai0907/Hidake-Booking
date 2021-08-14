@@ -43,16 +43,16 @@ struct EditAnnouncementCV: View {
     @State var announcementValue = ""
     @State var websiteLink = ""
     let db = Firestore.firestore()
-    @State var showImagePicker = false
-    @State var imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
-    @State var downloadedImageURL = ""
+    //@State var showImagePicker = false
+    //@State var imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
+    //@State var downloadedImageURL = ""
     
     var body: some View {
         
         VStack {
             
             
-            Image(uiImage: imageInBlackBox)
+            /*Image(uiImage: imageInBlackBox)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding()
@@ -61,7 +61,7 @@ struct EditAnnouncementCV: View {
                 }.sheet(isPresented: $showImagePicker){
                     AnnouncementImageViewPicker(isPresented: self.$showImagePicker, selectedImage: self.$imageInBlackBox, downloadedImageURL: $downloadedImageURL)
                     
-                }
+                }*/
             
             TextFieldView(placeHolder: "輸入公告內容: ", textValue: $announcementValue)
                 .padding(.bottom, 20)
@@ -71,19 +71,19 @@ struct EditAnnouncementCV: View {
                 
             
             
-            if downloadedImageURL != "" && announcementValue != "" {
+            if announcementValue != "" {
                 Button(action: {
                     let announcement = Announcement()
                     
                     announcement.info = announcementValue
-                    announcement.imageURL = downloadedImageURL
+                    //announcement.imageURL = downloadedImageURL
                     announcement.website = websiteLink
                     
                     do {
                         try db.collection("ANNOUNCEMENTS").document(announcement.id).setData(from: announcement)
                         announcementValue = ""
                         websiteLink = ""
-                        imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
+                        //imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
                         print("EditAnnouncementCV: uploaded the announcement!")
                         
                     } catch let error {

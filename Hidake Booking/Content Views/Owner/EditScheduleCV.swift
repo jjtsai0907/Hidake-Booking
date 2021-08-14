@@ -35,16 +35,16 @@ struct EditScheduleCV: View {
     //var category: String
     
     @State private var scheduleTitle = ""
-    @State private var scheduleDetails = ""
-    @State private var includedCost = ""
-    @State private var extraCost = ""
-    @State private var geers = ""
-    @State private var info = ""
+    @State private var scheduleDetails = "ex: 第一天... 7:00集合..."
+    @State private var includedCost = "ex: 台中高鐵 屯原登山口來回接駁(送下山盥洗)..."
+    @State private var extraCost = "ex: 三日午餐..."
+    @State private var geers = "ex: 舒適登山鞋..."
+    @State private var info = "ex: 退費準則..."
     
     
-    @State var showImagePicker = false
-    @State var imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
-    @State var downloadedImageURL = ""
+    //@State var showImagePicker = false
+    //@State var imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
+    //@State var downloadedImageURL = ""
     
     var body: some View {
         
@@ -53,7 +53,7 @@ struct EditScheduleCV: View {
             Form {
                 
                 
-                Section {
+                /*Section {
                     Image(uiImage: imageInBlackBox)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -66,26 +66,26 @@ struct EditScheduleCV: View {
                             AnnouncementImageViewPicker(isPresented: self.$showImagePicker, selectedImage: self.$imageInBlackBox, downloadedImageURL: $downloadedImageURL)
                             
                         }
-                }
+                }*/
                 
                 Section {
                     
                     
                     Row(icon: "sun.max.fill", title: "行程規劃：")
-                    TextField ("ex: 第一天... 7:00集合...", text: $scheduleDetails)
+                    TextEditor (text: $scheduleDetails)
                     
                     
                     Row(icon: "checkmark", title: "費用包含：")
-                    TextField ("ex: 台中高鐵 屯原登山口來回接駁(送下山盥洗)...", text: $includedCost)
+                    TextEditor (text: $includedCost)
                     
                     Row(icon: "bubble.left.and.bubble.right", title: "自理費用：")
-                    TextField ("ex: 三日午餐...", text: $extraCost)
+                    TextEditor (text: $extraCost)
                     
                     Row(icon: "checkmark", title: "所需裝備")
-                    TextField ("ex: 舒適登山鞋...", text: $geers)
+                    TextEditor (text: $geers)
                     
                     Row(icon: "exclamationmark.triangle.fill", title: "注意事項：")
-                    TextField ("ex: 退費準則...", text: $info)
+                    TextEditor (text: $info)
                     
                 }
                 
@@ -93,14 +93,14 @@ struct EditScheduleCV: View {
                     
                 
             }
-            if downloadedImageURL != "" {
+            
                 
                 Button(action: {
                     print("ScheduleCV : pressed")
                     
                     let schedule = Schedule()
                     
-                    schedule.imageURL = downloadedImageURL
+                    //schedule.imageURL = downloadedImageURL
                     schedule.scheduleTitle = scheduleTitle
                     schedule.scheduleDetails = scheduleDetails
                     schedule.includedCost = includedCost
@@ -115,7 +115,7 @@ struct EditScheduleCV: View {
                         extraCost = ""
                         geers = ""
                         info = ""
-                        imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
+                        //imageInBlackBox = UIImage(imageLiteralResourceName: "upload_sign")
                         print("ScheduleCV: uploaded the announcement!")
                         
                     } catch let error {
@@ -142,7 +142,7 @@ struct EditScheduleCV: View {
             
             
             
-        }.navigationTitle("編輯\(activity)行程")
+        .navigationTitle("編輯\(activity)行程")
         
     }
 }

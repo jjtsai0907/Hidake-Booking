@@ -25,11 +25,11 @@ struct AnnouncementCV: View {
             
             VStack {
                 //truckProfileDatas.datas.logoUrl.load()
-                Image(uiImage: announcement.imageURL.load())
+                /*Image(uiImage: announcement.imageURL.load())
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
-                    .cornerRadius(8)
+                    .cornerRadius(8) */
                 HStack {
                     Text("\(announcement.info)")
                         .bold()
