@@ -9,7 +9,7 @@ import SwiftUI
 import FSCalendar
 import FirebaseFirestoreSwift
 import FirebaseFirestore
-import UserNotifications
+//import UserNotifications
 
 struct CalenderCV: View {
     

@@ -5,7 +5,7 @@
 //  Created by Jia-Jiuan Tsai on 2021-03-10.
 //
 
-import SwiftUI
+/*import SwiftUI
 import Firebase
 import GoogleSignIn
 
@@ -62,7 +62,7 @@ struct LoginCV: View {
         
     }
 }
-
+*/
 
 /*
 struct LoginCV_Previews: PreviewProvider {

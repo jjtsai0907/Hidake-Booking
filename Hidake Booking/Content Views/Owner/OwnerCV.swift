@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Firebase
-import GoogleSignIn
+//import GoogleSignIn
 
 struct OwnerCV: View {
     
