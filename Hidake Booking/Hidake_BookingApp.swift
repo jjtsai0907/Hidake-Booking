@@ -75,7 +75,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
             self.email = (result?.user.email)!
             self.customerUID = (result?.user.uid)!
             
-            print(result?.user.email)
+            
         }
         
         

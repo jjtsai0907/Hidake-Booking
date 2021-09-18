@@ -149,6 +149,7 @@ struct EntryCV: View {
                 
             }){
                 Text("管理員")
+                    .foregroundColor(Color("themeBlue"))
             })
             
             

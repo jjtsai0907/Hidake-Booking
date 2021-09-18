@@ -1062,6 +1062,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hidake Booking/Hidake Booking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Hidake Booking/Preview Content\"";
 				DEVELOPMENT_TEAM = ZDU99QW27G;
 				ENABLE_PREVIEWS = YES;
@@ -1087,6 +1088,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hidake Booking/Hidake Booking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Hidake Booking/Preview Content\"";
 				DEVELOPMENT_TEAM = ZDU99QW27G;
 				ENABLE_PREVIEWS = YES;
