@@ -23,6 +23,11 @@ struct TabEditCV: View {
                     Image(systemName: "bell.fill")
                     Text("新增公告")
                 }
+            AddLocationCV()
+                .tabItem {
+                    Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                    Text("新增地點")
+                }
         }
         
         
