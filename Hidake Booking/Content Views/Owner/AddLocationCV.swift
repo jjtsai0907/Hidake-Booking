@@ -70,27 +70,7 @@ struct AddLocationCV: View {
         
     }
     
-    /*
-    func getStringArray () {
-        
-        db.collection("種類").document(selectedCategory).getDocument(completion: { documentSnapshot, error in
-           if let err = error {
-                print(err.localizedDescription)
-                return
-            }
-
-           if let doc = documentSnapshot {
-               //let title = doc.get("movie") as! String
-               let items = doc.get(selectedCategory) as! [String]
-               //print(title)
-               for item in items {
-                   print(item)
-               }
-           }
-       })
-    
-    }
-    */
+   
     
     func addLocation(newLocation: String){
         

@@ -18,7 +18,7 @@ struct EntryCV: View {
     @State private var index = 0
     @State private var showingOwnerCV = false
     
-  
+    @EnvironmentObject var env: GlobalEnvironment
     
     var body: some View {
         
@@ -115,6 +115,12 @@ struct EntryCV: View {
                 Spacer()
                 */
                 
+                Button {
+                    getAllCategories()
+                } label: {
+                    Text("Get all Categories")
+                }
+
                 
                 NavigationLink(destination: TabCV(), label: {
                     Text("我要預約行程")
@@ -142,7 +148,7 @@ struct EntryCV: View {
             .navigationTitle("")
             .navigationBarItems(trailing: Button(action: {
                 
-                
+                //env.getAllCategories()
                 
                     showingOwnerCV = true
                
@@ -154,7 +160,27 @@ struct EntryCV: View {
             
             
         }
+            
         
+        
+    }
+    
+    func getAllCategories() {
+        Firestore.firestore().collection("種類").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Global getAllCategories(): Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print(document.documentID)
+                    //print("\(document.documentID) => \(document.data())")
+                    let items = document.get(document.documentID) as! [String]
+                    //print(items)
+                    for item in items {
+                        print(item)
+                    }
+                }
+            }
+        }
     }
 }
 

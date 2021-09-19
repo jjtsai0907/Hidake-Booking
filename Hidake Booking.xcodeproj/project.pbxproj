@@ -32,6 +32,7 @@
 		B965B82F25FC563B004928EB /* MeCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965B82E25FC563B004928EB /* MeCV.swift */; };
 		B965B83A25FCF143004928EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B965B83925FCF143004928EB /* GoogleService-Info.plist */; };
 		B966B30826F72860001E6209 /* AddLocationCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966B30726F72860001E6209 /* AddLocationCV.swift */; };
+		B966B30A26F72CEB001E6209 /* GlobalEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966B30926F72CEB001E6209 /* GlobalEnvironment.swift */; };
 		B967648E25FCFFE600DFE368 /* OwnerCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967648D25FCFFE600DFE368 /* OwnerCV.swift */; };
 		B967649325FD028700DFE368 /* TabEditCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967649225FD028700DFE368 /* TabEditCV.swift */; };
 		B96D3AA3268211710011A585 /* Pods_Hidake_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6BC4BB1AD0F50E1E13E7D9 /* Pods_Hidake_Booking.framework */; };
@@ -130,6 +131,7 @@
 		B965B82E25FC563B004928EB /* MeCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCV.swift; sourceTree = "<group>"; };
 		B965B83925FCF143004928EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B966B30726F72860001E6209 /* AddLocationCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationCV.swift; sourceTree = "<group>"; };
+		B966B30926F72CEB001E6209 /* GlobalEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnvironment.swift; sourceTree = "<group>"; };
 		B967648D25FCFFE600DFE368 /* OwnerCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCV.swift; sourceTree = "<group>"; };
 		B967649225FD028700DFE368 /* TabEditCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEditCV.swift; sourceTree = "<group>"; };
 		B98A2C5625F997EF002D1ACF /* MenuCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCV.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				B901BC29262DB56000033AE6 /* ContactSheet.swift */,
 				B901BC2E262DB88C00033AE6 /* ContactInfoRow.swift */,
 				B916735E2663212E00B1BB0F /* Schedule.swift */,
+				B966B30926F72CEB001E6209 /* GlobalEnvironment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -836,6 +839,7 @@
 				B999DDD5262C16BF003ACB4C /* PrivateBookingCV.swift in Sources */,
 				B901BC2F262DB88C00033AE6 /* ContactInfoRow.swift in Sources */,
 				B9227AC92609BC8000982C66 /* GetDatas.swift in Sources */,
+				B966B30A26F72CEB001E6209 /* GlobalEnvironment.swift in Sources */,
 				B9FBA22F25FF1F01000CF548 /* EditActivityCalenderCV.swift in Sources */,
 				B901EC2525FE174A009E28CC /* EditDetailsSheet.swift in Sources */,
 				B9A5581D260AD55B007FDE19 /* Activity.swift in Sources */,
